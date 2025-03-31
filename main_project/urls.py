@@ -5,15 +5,15 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('portfolio/', include('portfolio.urls')),
-    path('personal/', include('personal.urls')),
-    path('blogs/', include('blogs.urls')),
-    path('hobby/', include('hobby.urls')),
-    path('help/', include('help.urls')),
-    path('manage/', include('memanage.urls')),
-    path('work/', include('work.urls')),
-    path('venture/', include('venture.urls')),
+    path('', include('app_main.urls')),
+    path('portfolio/', include('app_portfolio.urls')),
+    path('personal/', include('app_personal.urls')),
+    path('blogs/', include('app_blogs.urls')),
+    path('hobby/', include('app_hobby.urls')),
+    path('help/', include('app_help.urls')),
+    path('manage/', include('app_memanage.urls')),
+    path('work/', include('app_work.urls')),
+    path('venture/', include('app_venture.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
