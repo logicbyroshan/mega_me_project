@@ -1,0 +1,31 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('hobby/', views.hobby, name='hobby'),
+    path('hobby/<int:hobby_id>/', views.hobby_detail, name='hobby_detail'),
+    path('hobby/new/', views.hobby_new, name='hobby_new'),
+    path('hobby/<int:hobby_id>/edit/', views.hobby_edit, name='hobby_edit'),
+    path('hobby/<int:hobby_id>/delete/', views.hobby_delete, name='hobby_delete'),
+    path('products/', views.products, name='products'),
+    path('products/<int:product_id>/', views.product_detail, name='product_detail'),
+    path('cart/', views.cart, name='cart'),
+    path('cart/add/<int:product_id>/', views.cart_add, name='cart_add'),
+    path('cart/remove/<int:product_id>/', views.cart_remove, name='cart_remove'),
+    path('cart/checkout/', views.cart_checkout, name='cart_checkout'),
+    path('cart/checkout/success/', views.cart_checkout_success, name='cart_checkout_success'),
+    path('cart/checkout/failure/', views.cart_checkout_failure, name='cart_checkout_failure'),  
+    path('cart/checkout/cancel/', views.cart_checkout_cancel, name='cart_checkout_cancel'),
+    path('cart/checkout/webhook/', views.cart_checkout_webhook, name='cart_checkout_webhook'),
+    path('cart/checkout/confirm/', views.cart_checkout_confirm, name='cart_checkout_confirm'),
+    path('cart/checkout/confirm/success/', views.cart_checkout_confirm_success, name='cart_checkout_confirm_success'),
+    path('cart/checkout/confirm/failure/', views.cart_checkout_confirm_failure, name='cart_checkout_confirm_failure'),
+    path('cart/checkout/confirm/cancel/', views.cart_checkout_confirm_cancel, name='cart_checkout_confirm_cancel'),
+    path('cart/checkout/confirm/webhook/', views.cart_checkout_confirm_webhook, name='cart_checkout_confirm_webhook'),
+    path('orders/', views.orders, name='orders'),
+    path('orders/<int:order_id>/', views.order_detail, name='order_detail'),
+    path('orders/new/', views.order_new, name='order_new'),
+    path('orders/<int:order_id>/edit/', views.order_edit, name='order_edit'),
+    path('products_list/', views.products_list, name='products_list'),
+]
