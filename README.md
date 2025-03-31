@@ -33,7 +33,7 @@ my_portfolio/
 
 ## Installation & Setup
 ### Prerequisites
-- Python 3.x
+- Python 3.11
 - Git
 - Virtual Environment (venv)
 - Django (installed via pip)
@@ -42,7 +42,7 @@ my_portfolio/
 
 #### 1. Clone the Repository
 ```sh
-git clone https://github.com/yourusername/my_portfolio.git
+git clone https://github.com/logicbyroshan/my_portfolio.git
 cd my_portfolio
 ```
 
@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 For any queries, feel free to reach out:
 - **Email**: your.email@example.com
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
+- **GitHub**: [Your GitHub Profile](https://github.com/logicbyroshan)
 
 ---
 Happy Coding! 🚀
