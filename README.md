@@ -1,5 +1,5 @@
 # My Portfolio - Django Project
-
+#I am riya
 ## Project Overview
 This is a **Django-based Portfolio Web Application** that consists of multiple apps, each serving a different purpose. The main app (`main`) serves as the root of the project, while other apps have specific functionalities such as showcasing portfolio, blogs, hobbies, work, and ventures.
 
