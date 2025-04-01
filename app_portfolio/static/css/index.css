@@ -1,0 +1,265 @@
+/* Home Section Styles */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home-content {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.home-content p:first-child {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+}
+
+.home-content h1 {
+    color: rgb(111, 188, 255);
+    letter-spacing: 5px;
+    font-size: 100px;
+    font-family: var(--heading-font);
+    font-weight:900;
+}
+
+.home-content h4 {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: var(--secondary-font);
+}
+
+#skill-text {
+    font-weight: 900;
+    font-size: 35px;
+    color: var(--text-hover-color);
+}
+
+.home-content p:nth-child(4) {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+}
+
+.home-btns {
+    display: flex;
+    gap: 50px;
+}
+
+.home-container .success {
+    display: flex;
+    gap: 50px;
+}
+
+.home-container .success .success-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-container .success .success-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.home-container .success .success-card p {
+    font-size: 25px;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+}
+
+.home-hero-image {
+    width: 400px;
+    padding: 20px;
+}
+
+.home-hero-image img {
+    width: 100%;
+}
+
+
+
+/* CSS for FAQ Section */
+.faq-cards {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.faq-card {
+    width: 100%;
+    border: 1px solid var(--main-outline-color);
+    background-color: #555;
+    border-radius: 10px;
+    padding: 15px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-card h2 {
+    font-size: 25px; /* Larger font size */
+    margin: 0; /* Remove default margin */
+    font-family: var(--secondary-font);
+    color: var(--main-text-color);
+}
+
+.faq-card p {
+    font-size: 20px;
+    margin: 0;
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+}
+
+.faq-card:hover {
+    background-color: var(--main-bg-color-2); 
+}
+
+.faq-content .answer {
+    display: none; 
+    margin-top: 10px;
+    color: #555;
+}
+
+.btn-faq {
+
+    cursor: pointer;
+}
+
+.faq-toggle {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* CSS for Contact Section */
+.mail-contact-card {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--main-text-color);
+    border: 3px solid var(--main-outline-color);
+    margin-top: 30px;
+}
+
+.mail-contact-card .left-contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.mail-contact-card .right-contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.mail-contact-card .left-contact img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.left-contact .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-section .contact {
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.contact-section .contact p {
+    font-size: 25px;
+}
+
+.contact-section .contact img {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Contact Form Styling */
+.contact-form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--main-text-color);
+    background-color: var(--main-outline-color);
+}
+
+/* Stack form elements vertically */
+.contact-form-card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Make input, textarea, and button full width */
+.contact-form-card input,
+.contact-form-card textarea,
+.contact-form-card button {
+    width: 100%; /* Ensures full width */
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-text-color);
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    background: none;
+    color: var(--main-text-color);
+}
+
+/* Adjust Textarea Size */
+.contact-form-card textarea {
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 120px;
+}
+
+/* Button Styling */
+.contact-btn {
+    background-color: var(--secondary-text-color);
+    color: var(--main-text-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.contact-btn:hover {
+    background-color: var(--main-text-color);
+    color: var(--secondary-text-color);
+}
+
+/* Success/Error Message Display */
+#formMessage {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
