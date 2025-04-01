@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agu+Display&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/nira_blog_list.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <!--Cards Header-->
+        <div class="cards-header">
+            <h1>All Blogs</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Your Content">
+                <button><img src="../../static/images/search.png" alt="searchicon"></button>
+            </div>
+            <div class="cards-sorting">
+                <div class="cards-categories">
+                    <span class="category active" onclick="toggleCategory(this)">All Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Tech Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Job Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Education</span>
+                    <span class="category" onclick="toggleCategory(this)">Smartphones</span>
+                    <span class="category" onclick="toggleCategory(this)">Vehicles</span>
+                    <span class="category" onclick="toggleCategory(this)">AI Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Health Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Food Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Travel Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Fashion Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Sports Blogs</span>
+                    <span class="category" onclick="toggleCategory(this)">Entertainment Blogs</span>
+                </div>
+                <div class="cards-sort">
+                    <button class="view-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs</button>
+                    <div class="sort-items" id="sort-items">
+                        <ul>
+                            <li onclick="changeSortOption(this)">Latest Blogs</li>
+                            <li onclick="changeSortOption(this)">Oldest Blogs</li>
+                            <li onclick="changeSortOption(this)">Most Liked Blogs</li>
+                            <li onclick="changeSortOption(this)">Least Liked Blogs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Cards Container-->
+        <div class="cards-container">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span>Technology</span>
+                    <div class="date">
+                        <img src="../../static/images/menu.png" alt="">
+                        <p>2022-01-01</p>
+                        <p>. Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/User2.jpg" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/comments.png" alt="Comments">
+                            <span>12 Comments</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/like.png" alt="Likes">
+                            <span>250 Likes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span>Technology</span>
+                    <div class="date">
+                        <img src="../../static/images/menu.png" alt="">
+                        <p>2022-01-01</p>
+                        <p>. Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/User3.png" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/comments.png" alt="Comments">
+                            <span>12 Comments</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/like.png" alt="Likes">
+                            <span>250 Likes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span>Technology</span>
+                    <div class="date">
+                        <img src="../../static/images/menu.png" alt="">
+                        <p>2022-01-01</p>
+                        <p>. Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/user1.jpeg" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/comments.png" alt="Comments">
+                            <span>12 Comments</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <img src="../../static/images/like.png" alt="Likes">
+                            <span>250 Likes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../static/js/nira_blog_app.js"></script>
+    <script src="../../static/js/script.js"></script>
+
+</body>
+</html>
