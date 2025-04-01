@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'app_memanage',
     'app_work',
     'app_venture',
-    
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -137,10 +137,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INSTALLED_APPS = [
-    # other apps
-    'tinymce',
-]
 
 # TinyMCE Configuration
 TINYMCE_DEFAULT_CONFIG = {

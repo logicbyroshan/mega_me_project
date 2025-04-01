@@ -1,40 +1,4 @@
-:root {
-    --background-color: #001327;
-    --outline-color: #003d73;
-    --card-color: #004d7d;
-    --card-outline-color: #007da7a4;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --success-color: #28a745;
-    --heading-color: #836dff;
-    --subheading-color: #ffffff;
-    --paragraph-color: #b0b0b0;
-    --text-color: #d5d5d5;
-    --text-secondary-color: #c6c6c6;
-    --text-accent-color: #6a53ff;
-    --link-color: #439eff;
-    --link-hover-color: #056edf;
-    --font-genral: "Alumni Sans", sans-serif;
-    --font-special: "Josefin Slab", serif;
-    --font-heading: "Abril Fatface", sans-serif;
-    --font-subheading: "Agu Display", sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-genral);
-    color: var(--text-color);
-    letter-spacing: 1px;
-}
-
-body {
-    background-color: var(--background-color);
-    font-size: 1rem;
-    line-height: 1.2;
-}
-
+/* Home Page Styles */
 .portfolio-container {
     width: 100%;
     display: flex;
@@ -118,7 +82,7 @@ body {
     width: 50%;
 }
 .home-content p:first-child {
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
     margin: 0;
     color: var(--secondary-text-color);
@@ -148,7 +112,7 @@ body {
 }
 
 .home-content p:nth-child(4) {
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 0;
     color: var(--paragraph-color);
     font-family: var(--secondary-font);
@@ -158,6 +122,7 @@ body {
     display: flex;
     gap: 50px;
     margin-top: 10px;
+    background-color: transparent;
 }
 
 .home-container .success {

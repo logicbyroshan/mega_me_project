@@ -1,219 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agu+Display&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../static/css/project-detail.css">
-    <link rel="stylesheet" href="../../static/css/style.css">
-</head>
-<body>
-    <div class="main-container">
-        <div class="projects-container">
-            <div class="project-detail-card">
-                <div class="project-header">
-                    <p class="project-meg">Category : <span> Design</span></p>
-                    <p class="project-meg">Completion : <span> Jan 23, 2025</span></p>
-                    <p class="project-meg">Read Time : <span> 10 min</span></p>
-                </div>
-                <h1 class="project-title">UX In The Age of AI/ML</h1>
-                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas laboriosam qui nemo numquam voluptate.</p>
-                <div class="project-tags">
-                    <span class="project-tag">AI</span>
-                    <span class="project-tag">ML</span>
-                    <span class="project-tag">UI-UX</span>
-                    <span class="project-tag">Full Stack</span>
-                    <span class="project-tag">Design</span>
-                </div>
+{% extends 'app_portfolio/base.html' %}
+{% load static %}
+{% block title %}{{ project.title }}{% endblock %}
+{% block content %}
+    <div class="projects-container">
+        <div class="project-detail-card">
+            <div class="project-header">
+                <p class="project-meg">Category : <span> Design</span></p>
+                <p class="project-meg">Completion : <span> Jan 23, 2025</span></p>
+                <p class="project-meg">Read Time : <span> 10 min</span></p>
+            </div>
+            <h1 class="project-title">UX In The Age of AI/ML</h1>
+            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas laboriosam qui nemo numquam voluptate.</p>
+            <div class="project-tags">
+                <span class="project-tag">AI</span>
+                <span class="project-tag">ML</span>
+                <span class="project-tag">UI-UX</span>
+                <span class="project-tag">Full Stack</span>
+                <span class="project-tag">Design</span>
+            </div>
 
-                <div class="hero-image-slider">
-                    <div class="slider">
-                        <div class="slide"><img src="../../static/images/Project 1.jpg" alt="Project Image"></div>
-                        <div class="slide"><img src="../../static/images/Project 2.jpg" alt="Project Image"></div>
-                        <div class="slide"><img src="../../static/images/Project 3.jpg" alt="Project Image"></div>
-                    </div>
-                
-                    <!-- Navigation Buttons (Images Kept) -->
-                    <button class="prev">
-                        <img src="../../static/images/back.png" alt="Previous">
-                    </button>
-                    <button class="next">
-                        <img src="../../static/images/next (1).png" alt="Next">
-                    </button>
+            <div class="hero-image-slider">
+                <div class="slider">
+                    <div class="slide"><img src="../../static/images/Project 1.jpg" alt="Project Image"></div>
+                    <div class="slide"><img src="../../static/images/Project 2.jpg" alt="Project Image"></div>
+                    <div class="slide"><img src="../../static/images/Project 3.jpg" alt="Project Image"></div>
                 </div>
-                
-                <div class="project-skills">
-                    <h1>Skills :</h1>
-                    <div class="project-skills-list">
-                        <span class="project-skill"><img src="../../static/images/javascript.png" alt="">HTML</span>
-                        <span class="project-skill"><img src="../../static/images/css.png" alt="">CSS</span>
-                        <span class="project-skill"><img src="../../static/images/jquery.png" alt="">JavaScript</span>
-                        <span class="project-skill"><img src="../../static/images/react.png" alt="">React</span>
-                        <span class="project-skill"><img src="../../static/images/nodejs.png" alt="">Node.js</span>
-                        <span class="project-skill"><img src="../../static/images/python (1).png" alt="">Python</span>
-                        <span class="project-skill"><img src="../../static/images/sql.png" alt="">Django</span>
-                        <span class="project-skill"><img src="../../static/images/typescript.png" alt="">Flask</span>
-                        <span class="project-skill"><img src="../../static/images/mongo-db.png" alt="">Machine Learning</span>
-                    </div>
-                </div>
-
-                <div class="project-features">
-                    <div class="heading">
-                        <h1>Features :</h1>
-                    </div>
-                    <ul class="features-list">
-                        <li class="feature-card">
-                            <img src="../../static/images/projects.gif" alt="">
-                            <div class="feature-content">
-                                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
-                            </div>
-                        </li>
-                        <li class="feature-card">
-                            <img src="../../static/images/projects.gif" alt="">
-                            <div class="feature-content">
-                                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
-                            </div>
-                        </li>
-                        <li class="feature-card">
-                            <img src="../../static/images/projects.gif" alt="">
-                            <div class="feature-content">
-                                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="project-content-detailed">
-                    <h1>Welcome to My project</h1>
-                    <p>This is a sample project post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
-    
-                    <h2>Introduction</h2>
-                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
-    
-                    <h3>Embedded Image</h3>
-                    <img src="../../static/images/Ariba Agrifarm.jpg" alt="Sample Image">
-    
-                    <h3>Video Embed</h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
-                    </div>
-    
-                    <h3>Blockquote Example</h3>
-                    <blockquote>
-                        "This is an example of a blockquote. It should stand out from the rest of the text."
-                    </blockquote>
-    
-                    <h3>Unordered List</h3>
-                    <ul>
-                        <li>Responsive design</li>
-                        <li>Mobile-friendly layout</li>
-                        <li>Improved typography</li>
-                    </ul>
-    
-                    <h3>Ordered List</h3>
-                    <ol>
-                        <li>Install TinyMCE</li>
-                        <li>Customize styles</li>
-                        <li>Test on different devices</li>
-                    </ol>
-    
-                    <h3>Table Example</h3>
-                    <table>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Details</th>
-                        </tr>
-                        <tr>
-                            <td>Heading Colors</td>
-                            <td>Customizable with CSS</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Support</td>
-                            <td>Fully Responsive</td>
-                        </tr>
-                    </table>
-    
-                    <h3>Code Block</h3>
-                    <pre>
-                        <code>
-                            def hello_world():
-                                print("Hello, World!")
-                        </code>
-                    </pre>
-    
-                    <h3>Horizontal Rule</h3>
-                    <hr>
-    
-                    <h3>Conclusion</h3>
-                    <p>This concludes our test project. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            
+                <!-- Navigation Buttons (Images Kept) -->
+                <button class="prev">
+                    <img src="../../static/images/back.png" alt="Previous">
+                </button>
+                <button class="next">
+                    <img src="../../static/images/next (1).png" alt="Next">
+                </button>
+            </div>
+            
+            <div class="project-skills">
+                <h1>Skills :</h1>
+                <div class="project-skills-list">
+                    <span class="project-skill"><img src="../../static/images/javascript.png" alt="">HTML</span>
+                    <span class="project-skill"><img src="../../static/images/css.png" alt="">CSS</span>
+                    <span class="project-skill"><img src="../../static/images/jquery.png" alt="">JavaScript</span>
+                    <span class="project-skill"><img src="../../static/images/react.png" alt="">React</span>
+                    <span class="project-skill"><img src="../../static/images/nodejs.png" alt="">Node.js</span>
+                    <span class="project-skill"><img src="../../static/images/python (1).png" alt="">Python</span>
+                    <span class="project-skill"><img src="../../static/images/sql.png" alt="">Django</span>
+                    <span class="project-skill"><img src="../../static/images/typescript.png" alt="">Flask</span>
+                    <span class="project-skill"><img src="../../static/images/mongo-db.png" alt="">Machine Learning</span>
                 </div>
             </div>
-            <div class="project-side-card">
-                <div class="project-side-card1">
-                    <img src="../../static/images/user1.jpeg" alt="">
-                    <h1><span>by :</span> Roshan Damor</h1>
+
+            <div class="project-features">
+                <div class="heading">
+                    <h1>Features :</h1>
                 </div>
-                <div class="project-side-card1">
-                    <h1 class="project-side-title">Latest projects</h1>
-                    <div class="latest-projects">
-                        <div class="latest-project">
-                            <h2>01</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                <ul class="features-list">
+                    <li class="feature-card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
                         </div>
-                        <div class="latest-project">
-                            <h2>02</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </li>
+                    <li class="feature-card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
                         </div>
-                        <div class="latest-project">
-                            <h2>03</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </li>
+                    <li class="feature-card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
                         </div>
-                        <div class="latest-project">
-                            <h2>04</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
-                        <div class="latest-project">
-                            <h2>05</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-content-detailed">
+                <h1>Welcome to My project</h1>
+                <p>This is a sample project post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="../../static/images/Ariba Agrifarm.jpg" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test project. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+        </div>
+        <div class="project-side-card">
+            <div class="project-side-card1">
+                <img src="../../static/images/user1.jpeg" alt="">
+                <h1><span>by :</span> Roshan Damor</h1>
+            </div>
+            <div class="project-side-card1">
+                <h1 class="project-side-title">Latest projects</h1>
+                <div class="latest-projects">
+                    <div class="latest-project">
+                        <h2>01</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>02</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>03</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>04</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>05</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
                     </div>
                 </div>
-    
-                <div class="project-side-card1">
-                    <h1 class="project-side-title">Popular projects</h1>
-                    <div class="latest-projects">
-                        <div class="latest-project">
-                            <h2>01</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
-                        <div class="latest-project">
-                            <h2>02</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
-                        <div class="latest-project">
-                            <h2>03</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
-                        <div class="latest-project">
-                            <h2>04</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
-                        <div class="latest-project">
-                            <h2>05</h2>
-                            <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
-                        </div>
+            </div>
+
+            <div class="project-side-card1">
+                <h1 class="project-side-title">Popular projects</h1>
+                <div class="latest-projects">
+                    <div class="latest-project">
+                        <h2>01</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>02</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>03</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>04</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-project">
+                        <h2>05</h2>
+                        <h1 class="project-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../../static/js/script.js"></script>
-    <script src="../../static/js/nira_portfolio_app.js"></script>
-</body>
-</html>
+{% endblock %}

@@ -47,21 +47,3 @@ class FAQListView(ListView):
 # Contact page
 class ContactView(TemplateView):
     template_name = "app_portfolio/contact.html"
-
-# Subscription form
-class SubscribeView(FormView):
-    template_name = "app_portfolio/subscribe.html"
-    form_class = SubscriptionForm
-    success_url = "/thank-you/"
-
-    def form_valid(self, form):
-        form.save()  # Save the form data
-        return HttpResponse("Thank you for subscribing!")
-
-# Terms page
-class TermsView(TemplateView):
-    template_name = "app_portfolio/terms.html"
-
-# Privacy page
-class PrivacyView(TemplateView):
-    template_name = "app_portfolio/privacy.html"

@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{% static 'images/icons/favicon.ico' %}">
-    
-    <link rel="preconnect" href="{% static'https://fonts.googleapis.com' %}">
-    <link rel="preconnect" href="{% static'https://fonts.gstatic.com' %}" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agu+Display&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/style.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/nira_portfolio_app.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/experiences_list.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/projects_list.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/skills_list.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/blogs_list.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/faqs_list.css'%}">
-    <link rel="stylesheet" href="{% static'../../static/css/portfolio_app/contact_list.css'%}">
-    <title>Portfolio |{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nira_portfolio_app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/experiences_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skills_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blogs_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/faqs_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact_list.css' %}">
+    <title>Portfolio | {% block title %}{% endblock %}</title>
     
 </head>
 
 <body>
+    <script src="{% static 'js/portfolio_app.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
     <div class="main-container">
 
         <div class="navbar">
@@ -54,8 +57,6 @@
                 <a href="/blogs">Blogs</a>
                 <a href="{% url 'home' %}#contact">Contact</a>
             </div>
-
-                        <!-- Resume Download Button -->
             <div class="nav-btns">
                 <button class="outline-btn" onclick="showPopup()">Download Resume</button>
             </div>

@@ -1,0 +1,117 @@
+:root {
+    --background-color: #001327;
+    --outline-color: #003d73;
+    --card-color: #004d7d;
+    --card-outline-color: #007da7a4;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --heading-color: #836dff;
+    --subheading-color: #ffffff;
+    --paragraph-color: #b0b0b0;
+    --text-color: #d5d5d5;
+    --text-secondary-color: #c6c6c6;
+    --text-accent-color: #6a53ff;
+    --link-color: #439eff;
+    --link-hover-color: #056edf;
+    --font-genral: "Alumni Sans", sans-serif;
+    --font-special: "Josefin Slab", serif;
+    --font-heading: "Abril Fatface", sans-serif;
+    --font-subheading: "Agu Display", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-genral);
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* FAQ Card */
+.faq-card {
+    width: 100%;
+    background: var(--card-color);
+    border: 3px solid var(--card-outline-color);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-card:hover {
+    background: linear-gradient(145deg, var(--link-hover-color), var(--card-outline-color));
+}
+
+/* Question Section */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: var(--font-subheading);
+}
+
+/* PNG Icon */
+.faq-icon {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Answer (Initially Hidden) */
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: max-height 0.3s ease-in-out;
+    font-family: var(--font-genral);
+    line-height: 1.5;
+}
+
+/* Open State */
+.faq-card.active .faq-answer {
+    display: block;
+}
+
+/* 📱 Mobile Responsiveness (320px & Up) */
+@media screen and (max-width: 480px) {
+    .faq-container {
+        width: 95%;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .faq-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .faq-answer {
+        font-size: 13px;
+    }
+}

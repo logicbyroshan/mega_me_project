@@ -1,40 +1,4 @@
-:root {
-  --background-color: #001327;
-  --outline-color: #003d73;
-  --card-color: #004d7d;
-  --card-outline-color: #007da7a4;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
-  --heading-color: #836dff;
-  --subheading-color: #ffffff;
-  --paragraph-color: #b0b0b0;
-  --text-color: #d5d5d5;
-  --text-secondary-color: #c6c6c6;
-  --text-accent-color: #6a53ff;
-  --link-color: #439eff;
-  --link-hover-color: #056edf;
-  --font-genral: "Alumni Sans", sans-serif;
-  --font-special: "Josefin Slab", serif;
-  --font-heading: "Abril Fatface", sans-serif;
-  --font-subheading: "Agu Display", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-genral);
-  background-color: var(--background-color);
-  color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Project Detail Page CSS */
 .projects-container {
   width: 100%;
   display: flex;

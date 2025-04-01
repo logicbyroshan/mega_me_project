@@ -1,0 +1,542 @@
+:root {
+  --background-color: #001327;
+  --outline-color: #003d73;
+  --card-color: #004d7d;
+  --card-outline-color: #007da7a4;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --heading-color: #836dff;
+  --subheading-color: #ffffff;
+  --paragraph-color: #b0b0b0;
+  --text-color: #d5d5d5;
+  --text-secondary-color: #c6c6c6;
+  --text-accent-color: #6a53ff;
+  --link-color: #439eff;
+  --link-hover-color: #056edf;
+  --font-genral: "Alumni Sans", sans-serif;
+  --font-special: "Josefin Slab", serif;
+  --font-heading: "Abril Fatface", sans-serif;
+  --font-subheading: "Agu Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-genral);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs-container {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  align-items: start;
+}
+
+.blog-side-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  gap: 30px;
+}
+
+.blog-side-card1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 5px var(--card-outline-color);
+}
+
+.blog-side-card1 h1 span {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+.blog-side-card1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.blog-side-card1 h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--subheading-color);
+  letter-spacing: 2px;
+}
+
+.blog-detail-card {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  gap: 15px;
+}
+
+.blog-detail-card img {
+  width: 100%;
+  border-radius: 20px;
+  border: solid 5px var(--card-outline-color);
+}
+
+.blog-content-detailed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.blog-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.blog-header .blog-meg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.blog-detail-card h1 {
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  color: var(--subheading-color);
+}
+
+.blog-detail-card p {
+  font-family: var(--font-genral);
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: var(--main-text-color);
+}
+
+.blog-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-tags .blog-tag {
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  background-color: var(--card-color);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.latest-blogs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.latest-blogs .latest-blog {
+  max-width: 350px;
+  min-width: 300px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  justify-content: start;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--card-color);
+  transition: background-color 0.6s;
+}
+
+.latest-blog:hover {
+  background-color: var(--heading-color);
+  cursor: pointer;
+}
+
+.latest-blog h2 {
+  font-family: var(--font-subheading);
+  font-size: 30px;
+  line-height: 0.8;
+  color: var(--heading-text-color);
+}
+
+.latest-blog h1 {
+  font-family: var(--font-special);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--main-text-color);
+}
+
+.blog-appri{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.blog-header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.blog-head-left{
+  display: flex;
+  gap: 15px;
+}
+
+.blog-head-right{
+  display: flex;
+  gap: 15px;
+}
+
+.blog-profile{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.blog-profile img{
+  width: 40px;
+  border-radius: 50%;
+  border: solid 3px var(--subheading-color);
+}
+.blog-profile h1{
+  font-size: 25px;
+  font-family: var(--font-special);
+  letter-spacing: 0;
+}
+
+.blog-status{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.blog-status img{
+  height: 40px;
+  width: 40px;
+  border-radius: 0;
+  border: none;
+}
+
+.blog-status img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.blog-status p{
+  font-size: 25px;
+  font-family: var(--font-special);
+  color: var(--subheading-color);
+}
+
+.blog-commenting{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.blog-commenting textarea{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  color: var(--text-color);
+  background-color: transparent;
+  border: solid 3px var(--card-outline-color);
+  resize: none;
+}
+
+.blog-commenting textarea:focus{
+  outline: none;
+}
+
+.blogs-btn{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog-comments{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-comments .blog-comment{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  padding: 15px;
+  background-color: var(--card-color);
+  border-radius: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .blogs-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-side-card {
+    width: 100%;
+  }
+
+  .blog-detail-card {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+
+  .blog-side-card1 {
+    border: solid 3px var(--card-outline-color);
+  }
+
+  .blog-detail-card h1 {
+    font-size: 2rem;
+  }
+
+  .blog-profile h1 {
+    font-size: 24px;
+  }
+
+  .blog-detail-card p {
+    font-size: 1.2rem;
+  }
+
+  .blog-tags .blog-tag {
+    font-size: 1.2rem;
+  }
+
+  .latest-blog h2 {
+    font-size: 25px;
+  }
+
+  .latest-blog h1 {
+    font-size: 18px;
+  }
+}
+
+/* Custom Content Loading CSS */
+.blog-content-detailed h1 {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+.blog-content-detailed h2 {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.blog-content-detailed h3 {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.blog-content-detailed h4, 
+.blog-content-detailed h5, 
+.blog-content-detailed h6 {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.blog-content-detailed p {
+  color: var(--paragraph-color);
+  font-family: var(--font-genral);
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/* Responsive Images & Videos */
+.blog-content-detailed img, 
+.blog-content-detailed iframe, 
+.blog-content-detailed video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+  border: solid 3px var(--card-outline-color);
+}
+
+/* Video Container for Aspect Ratio */
+.blog-content-detailed .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.blog-content-detailed .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Blockquote */
+.blog-content-detailed blockquote {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: 2px;
+  border-left: 5px solid var(--heading-color);
+  padding: 10px 15px;
+  background: var(--card-color);
+}
+
+/* Responsive Lists */
+.blog-content-detailed ul, 
+.blog-content-detailed ol {
+  color: var(--paragraph-color);
+  font-family: var(--font-genral);
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-left: 20px;
+}
+
+.blog-content-detailed ul li, 
+.blog-content-detailed ol li {
+  margin-bottom: 10px;
+}
+
+/* Code Blocks */
+.blog-content-detailed code {
+  color: var(--subheading-color);
+  line-height: 1.2;
+  font-family: var(--font-special);
+  font-size: 18px;
+  background-color: var(--card-color);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.blog-content-detailed pre {
+  color: var(--heading-color);
+  font-family: var(--font-special);
+  font-size: 18px;
+  background-color: var(--card-color);
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive Tables */
+.blog-content-detailed table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.blog-content-detailed th, 
+.blog-content-detailed td {
+  border: 1px solid var(--card-outline-color);
+  padding: 10px;
+  text-align: left;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.blog-content-detailed th {
+  background-color: var(--card-color);
+  color: var(--subheading-color);
+}
+
+/* Make Tables Scrollable on Mobile */
+@media (max-width: 768px) {
+  .blog-content-detailed table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .blog-content-detailed h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .blog-content-detailed h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+
+  .blog-content-detailed h3 {
+    font-size: 22px;
+  }
+
+  .blog-content-detailed h4, 
+  .blog-content-detailed h5, 
+  .blog-content-detailed h6 {
+    font-size: 18px;
+  }
+
+  .blog-content-detailed p, 
+  .blog-content-detailed ul, 
+  .blog-content-detailed ol, 
+  .blog-content-detailed code, 
+  .blog-content-detailed pre {
+    font-size: 16px;
+  }
+
+  .blog-content-detailed blockquote {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
+
