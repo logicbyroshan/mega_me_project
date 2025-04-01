@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView, FormView
 from .models import Skill, Project, Experience, FAQ  # Import models
-from .forms import SubscriptionForm  # Ensure this form exists
 
 # Home page
 class HomeView(TemplateView):

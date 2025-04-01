@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{% static 'images/icons/favicon.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agu+Display&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -26,7 +26,6 @@
     <script src="{% static 'js/script.js' %}"></script>
 
     <div class="main-container">
-
         <div class="navbar">
             <div class="logo">
                 <div class="hamburger">
@@ -44,7 +43,7 @@
                 </div>
                 <div class="logo-img">
                     <a href="/">
-                        <img src="{% static 'images/stock/Roshan Logo White.png' %}" alt="logo">
+                        <img src="{% static 'images/Logo.png' %}" alt="logo">
                         <p>Portfolio</p>
                     </a>
                 </div>
@@ -58,7 +57,7 @@
                 <a href="{% url 'home' %}#contact">Contact</a>
             </div>
             <div class="nav-btns">
-                <button class="outline-btn" onclick="showPopup()">Download Resume</button>
+                <button class="download-btn" onclick="showPopup()">Download Resume</button>
             </div>
         </div>
         

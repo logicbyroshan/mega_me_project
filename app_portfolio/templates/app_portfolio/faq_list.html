@@ -7,7 +7,7 @@
         <h1>All FAQ's</h1>
         <div class="search-bar">
             <input type="text" placeholder="Search Your Content">
-            <button><img src="../../static/images/search.png" alt="searchicon"></button>
+            <button><img src="{% static 'images/search.png' %}" alt="searchicon"></button>
         </div>
         <div class="cards-sorting">
             <div class="cards-categories">
@@ -40,10 +40,10 @@
     </div>
 
     <div class="card-container">
-        <div class="faq-card" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+        <div class="faq-card" data-open-icon="{% static 'images/open.png' %}" data-close-icon="{% static 'images/close.png' %}">
             <div class="faq-question">
                 <span>What is Lorem Ipsum?</span>
-                <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                <img src="{% static 'images/open.png' %}" class="faq-icon" alt="Expand">
             </div>
             <div class="faq-answer">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.

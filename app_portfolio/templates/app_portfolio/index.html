@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="home-hero-image">
-                <img src="../../static/images/MyHero Img.png" alt="Hero Image">
+                <img src="{% static 'images/MyHero Img.png' %}" alt="Hero Image">
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
         <div class="portfolio-header">
             <div class="head">
                     <h1>Skills I've <br><span>Learn't</span></h1>
-                    <a href="">View All <img src="../../static/images/next.png" alt=""></a>
+                    <a href="">View All <img src="{% static 'images/right-arrow.png' %}" alt=""></a>
             </div>
                 <p>"I have experience working with a variety of technologies to build efficient and scalable solutions. From frontend development to backend architectures, I enjoy leveraging the right tools for the job. Here’s a breakdown of my key skills:"</p>
         </div>
@@ -241,7 +241,7 @@
         <div class="portfolio-header">
             <div class="head">
                     <h1>Where I've <br><span>Worked</span></h1>
-                    <a href="">View All <img src="../../static/images/next.png" alt=""></a>
+                    <a href="">View All <img src="{% static 'images/right-arrow.png' %}" alt=""></a>
             </div>                    
             <p>"Over the years, I have gained hands-on experience in various roles, contributing to impactful projects and collaborating with talented teams. Here’s a glimpse into my professional journey:"</p>
         </div>
@@ -299,7 +299,7 @@
         <div class="portfolio-header">
             <div class="head">
                     <h1>Projects I've <br><span>Built</span></h1>
-                    <a href="">View All <img src="../../static/images/next.png" alt=""></a>
+                    <a href="">View All <img src="{% static 'images/right-arrow.png' %}" alt=""></a>
             </div>
                 <p>"I love turning ideas into reality through code. Here are some of the projects I’ve worked on, ranging from web applications to AI-powered tools. Each project is a reflection of my skills, problem-solving approach, and creativity."</p>
         </div>
@@ -310,7 +310,7 @@
                 </div>
                 <div class="project-content">
                     <div class="date">
-                        <img src="../../static/images/menu.png" alt="">
+                        <img src="{% static 'images/calendar.png' %}" alt="">
                         <p>Completion : <span> 24 December 2020</span></p>
                     </div>
                     <h2>Modern Landing Page E-comm Project using Python-Django</h2>
@@ -395,7 +395,7 @@
         <div class="portfolio-header">
             <div class="head">
                     <h1>Latest I've <br><span>Writings</span></h1>
-                <a href="">View All <img src="../../static/images/next.png" alt=""></a>
+                <a href="">View All <img src="{% static 'images/right-arrow.png' %}" alt=""></a>
             </div>
                 <p>"I enjoy sharing insights and experiences through writing. Whether it’s tutorials, case studies, or thoughts on technology, my blog is a space where I document and share my learning. Check out some of my latest posts:"</p>
         </div>
@@ -407,7 +407,7 @@
                 <div class="blog-content">
                     <span>Technology</span>
                     <div class="date">
-                        <img src="../../static/images/menu.png" alt="">
+                        <img src="{% static 'images/calendar.png' %}" alt="">
                         <p>2022-01-01</p>
                         <p>. Read Time: 10 min</p>
                     </div>
@@ -416,16 +416,16 @@
                 </div>
                 <div class="blog-footer">
                     <div class="publisher">
-                        <img src="../../static/images/User2.jpg" alt="Publisher">
+                        <img src="{% static 'images/Profile Pic 4.jpg' %}" alt="Publisher">
                         <p>John Doe</p>
                     </div>
                     <div class="comments-likes">
                         <a href="blog-detail.html">
-                            <img src="../../static/images/comments.png" alt="Comments">
+                            <img src="{% static 'images/comments.png' %}" alt="Comments">
                             <span>12 Comments</span>
                         </a>
                         <a href="blog-detail.html">
-                            <img src="../../static/images/like.png" alt="Likes">
+                            <img src="{% static 'images/like.png' %}" alt="Likes">
                             <span>250 Likes</span>
                         </a>
                     </div>
@@ -503,15 +503,15 @@
         <div class="portfolio-header">
             <div class="head">
                     <h1>Got Some <br><span>Questions?</span></h1>
-                    <a href="">View All <img src="../../static/images/next.png" alt=""></a>
+                    <a href="">View All <img src="{% static 'images/right-arrow.png' %}" alt=""></a>
             </div>
                 <p>"Here are some common questions I get asked. If you have more queries, feel free to reach out!"</p>
         </div>
         <div class="card-container">
-            <div class="faq-card" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+            <div class="faq-card" data-open-icon="{% static 'images/open.png' %}" data-close-icon="{% static 'images/close.png' %}">
                 <div class="faq-question">
                     <span>What is Lorem Ipsum?</span>
-                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                    <img src="{% static 'images/open.png' %}" class="faq-icon" alt="Expand">
                 </div>
                 <div class="faq-answer">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -581,7 +581,7 @@
             <div class="mail-contact-card">
     
                 <div class="left-contact">
-                    <img src="../../static/images/Newsletter-cuate.svg" alt="">
+                    <img src="{% static 'images/mail image.png' %}" alt="">
                 </div>
                 <div class="right-contact">
                     <div class="contact-form-card">
@@ -589,14 +589,14 @@
                             <input type="text" placeholder="Name">
                             <input type="email" placeholder="E-mail">
                             <textarea name="" id="" cols="30" rows="8" placeholder="Message"></textarea>
-                            <button class="outline-btn">SEND MESSAGE <img src="../../static/images/right-arrow.png" alt=""></button>
+                            <button class="outline-btn">SEND MESSAGE <img src="{% static 'images/right-arrow.png' %}" alt=""></button>
                             <div class="success-massage">
                                 <div class="success" id="success">
-                                    <img src="../../static/images/checked.png" alt="">
+                                    <img src="{% static 'images/checked.png' %}" alt="">
                                     <p>Your message has been sent successfully</p>
                                 </div>
                                 <div class="success" id="error">
-                                    <img src="../../static/images/cancel (1).png" alt="">
+                                    <img src="{% static 'images/cancel.png' %}" alt="">
                                     <p>Something went wrong, please try again</p>
                                 </div>
                             </div>

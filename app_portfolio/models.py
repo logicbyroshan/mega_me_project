@@ -4,8 +4,6 @@ from django.core.exceptions import ValidationError
 from tinymce.models import HTMLField
 
 
-# Skill Model
-
 # Skill progress choices
 SKILL_PROGRESS_CHOICES = [
     ("LEARNING", "Learning"),
@@ -63,6 +61,7 @@ class SkillResource(models.Model):
     resource_type = models.CharField(max_length=10, choices=RESOURCE_TYPES)
     file = models.FileField(upload_to="skill_resources/", null=True, blank=True)
     link = models.URLField(null=True, blank=True, help_text="For external links or YouTube videos.")
+    created_at = models.DateTimeField(auto_now_add=True, help_text="Date when the resource was created.")
 
     def clean(self):
         """ Ensure at least a file or a link is provided """
@@ -108,6 +107,8 @@ class Project(models.Model):
     # TinyMCE for rich-text project details
     details = HTMLField(null=False, blank=False)
 
+    created_at = models.DateTimeField(auto_now_add=True, help_text="Date when the project was created.")
+
     def __str__(self):
         return self.title
 
@@ -144,26 +145,107 @@ class Feature(models.Model):
 
 # Experience Model
 class Experience(models.Model):
-    position = models.CharField(max_length=255)
-    company = models.CharField(max_length=255)
-    start_date = models.DateField()
-    end_date = models.DateField(blank=True, null=True)
-    description = models.TextField()
+    STATUS_CHOICES = [
+        ('current', 'Currently Working'),
+        ('left', 'Left'),
+        ('new', 'Started New'),
+    ]
+
+    status = models.CharField(
+        max_length=10,
+        choices=STATUS_CHOICES,
+        default='new',
+        help_text="Current status of the job."
+    )
+    start_date = models.DateField(help_text="Start date of the experience.")
+    end_date = models.DateField(
+        blank=True,
+        null=True,
+        help_text="End date of the experience. Leave blank if currently working."
+    )
+    company_name = models.CharField(
+        max_length=255,
+        default='Company Name',
+        help_text="Name of the company or organization."
+    )
+    company_logo = models.ImageField(
+        upload_to='company_logos/',
+        null=True,
+        blank=True,
+        help_text="Logo of the company."
+    )
+
+    created_at = models.DateTimeField(auto_now_add=True, help_text="Date when the experience was created.")
+
+    position = models.CharField(
+        max_length=100,
+        default='Employee',
+        help_text="Job title or position held."
+    )
+    description = models.TextField(
+        default='No description provided.',
+        help_text="Brief overview of the experience."
+    )
+    skills = models.ManyToManyField(
+        Skill,
+        related_name='experiences',
+        blank=True,
+        help_text="Skills utilized during this experience."
+    )
+    contributions = models.JSONField(
+        default=list,
+        help_text="List of contributions with details such as icon, title, and description."
+    )
+    detailed_blog = HTMLField(
+        default='',
+        help_text="Detailed narrative of the experience with rich text formatting."
+    )
 
     def __str__(self):
-        return f"{self.position} at {self.company}"
+        return f"{self.position} ({self.start_date} - {self.end_date if self.end_date else 'Present'})"
+
+class ExperienceImage(models.Model):
+    experience = models.ForeignKey(
+        Experience,
+        related_name='images',
+        on_delete=models.CASCADE
+    )
+    image = models.ImageField(
+        upload_to='experience_images/',
+        help_text="Images related to the experience."
+    )
+
+    def __str__(self):
+        return f"Image for {self.experience.position}"
+    
 
 # FAQ Model
 class FAQ(models.Model):
+    FAQ_CATEGORIES = [
+        ("GENERAL", "General"),
+        ("TECHNICAL", "Technical"),
+        ("PRIVACY", "Privacy"),
+        ("SECURITY", "Security"),
+    ]
+
+    category = models.CharField(max_length=20, choices=FAQ_CATEGORIES, default="GENERAL")
+    created_at = models.DateTimeField(auto_now_add=True)
     question = models.CharField(max_length=255)
     answer = models.TextField()
 
     def __str__(self):
         return self.question
 
-class Subscription(models.Model):
-    email = models.EmailField(unique=True)
-    subscribed_at = models.DateTimeField(auto_now_add=True)
+
+class PersonalInfo(models.Model):
+    name = models.CharField(max_length=255, default="Your Name")
+    profile_image = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    total_projects = models.PositiveIntegerField(default=0)
+    years_of_experience = models.PositiveIntegerField(default=0)
+    about_me = models.TextField(default="A short description about yourself.")
+    titles = models.JSONField(default=list)  # Store multiple titles as a list
+    detailed_description = models.TextField(("Detailed Description"), default="A detailed description about yourself.")
+    resume = models.FileField(upload_to='resumes/', blank=True, null=True)
 
     def __str__(self):
-        return self.email
+        return self.name
