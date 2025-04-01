@@ -1,64 +1,67 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import SubscriptionForm
 from django.http import HttpResponse
-from django.views import view, viewList 
+from django.views.generic import TemplateView, ListView, DetailView, FormView
+from .models import Skill, Project, Experience, FAQ  # Import models
+from .forms import SubscriptionForm  # Ensure this form exists
 
+# Home page
+class HomeView(TemplateView):
+    template_name = "app_portfolio/index.html"
 
-# Views
-class HomeView(view):
-    def get(self, request):
-        return render(request, 'home.html')
+# Skill list
+class SkillListView(ListView):
+    model = Skill
+    template_name = "app_portfolio/skill_list.html"
+    context_object_name = "skills"
 
-class SkillListView(viewList):
-    def get(self, request):
-        skills = Skill.objects.all()
-        return render(request, 'skill_list.html', {'skills': skills})
+# Project list
+class ProjectListView(ListView):
+    model = Project
+    template_name = "app_portfolio/project_list.html"
+    context_object_name = "projects"
 
-class ProjectListView(viewList):
-    def get(self, request):
-        projects = Project.objects.all()
-        return render(request, 'project_list.html', {'projects': projects})
+# Project details
+class ProjectDetailView(DetailView):
+    model = Project
+    template_name = "app_portfolio/project_detail.html"
+    context_object_name = "project"
 
-class ProjectDetailView(viewList):
-    def get(self, request, project_id):
-        project = Project.objects.get(id=project_id)
-        return render(request, 'project_detail.html', {'project': project})
+# Experience list
+class ExperienceListView(ListView):
+    model = Experience
+    template_name = "app_portfolio/experience_list.html"
+    context_object_name = "experiences"
 
-class ExperienceListView(viewList):
-    def get(self, request):
-        experiences = Experience.objects.all()
-        return render(request, 'experience_list.html', {'experiences': experiences})
+# Experience details
+class ExperienceDetailView(DetailView):
+    model = Experience
+    template_name = "app_portfolio/experience_detail.html"
+    context_object_name = "experience"
 
-class ExperienceDetailView(view):
-    def get(self, request, experience_id):
-        experience = Experience.objects.get(id=experience_id)
-        return render(request, 'experience_detail.html', {'experience': experience})
+# FAQ list
+class FAQListView(ListView):
+    model = FAQ
+    template_name = "faq_list.html"
+    context_object_name = "faqs"
 
-class FAQListView(viewList):
-    def get(self, request):
-        faqs = FAQ.objects.all()
-        return render(request, 'faq_list.html', {'faqs': faqs})
+# Contact page
+class ContactView(TemplateView):
+    template_name = "app_portfolio/contact.html"
 
-class ContactView(view):
-    def get(self, request):
-        return render(request, 'contact.html')
+# Subscription form
+class SubscribeView(FormView):
+    template_name = "app_portfolio/subscribe.html"
+    form_class = SubscriptionForm
+    success_url = "/thank-you/"
 
-class SubscribeView(view):
-    def get(self, request):
-        form = SubscriptionForm()
-        return render(request, 'subscribe.html', {'form': form})
+    def form_valid(self, form):
+        form.save()  # Save the form data
+        return HttpResponse("Thank you for subscribing!")
 
-    def post(self, request):
-        form = SubscriptionForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponse("Thank you for subscribing!")
-        return render(request, 'subscribe.html', {'form': form})
+# Terms page
+class TermsView(TemplateView):
+    template_name = "app_portfolio/terms.html"
 
-class TermsView(view):
-    def get(self, request):
-        return render(request, 'terms.html')
-
-class PrivacyView(view):
-    def get(self, request):
-        return render(request, 'privacy.html')
+# Privacy page
+class PrivacyView(TemplateView):
+    template_name = "app_portfolio/privacy.html"
