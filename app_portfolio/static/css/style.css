@@ -229,7 +229,7 @@ body {
 }
 
 .cards-header h1 {
-    font-size: 65px;
+    font-size: 50px;
     letter-spacing: 3px;
     color: var(--heading-color);
     font-family: var(--font-heading);

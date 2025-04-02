@@ -14,6 +14,8 @@ urlpatterns = [
     path('manage/', include('app_memanage.urls')),
     path('work/', include('app_work.urls')),
     path('venture/', include('app_venture.urls')),
+    path('tinymce/', include('tinymce.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from tinymce.models import HTMLField
+from django.utils.timezone import now
+
 
 
 # Skill progress choices
@@ -175,7 +177,7 @@ class Experience(models.Model):
         help_text="Logo of the company."
     )
 
-    created_at = models.DateTimeField(auto_now_add=True, help_text="Date when the experience was created.")
+    created_at = models.DateTimeField(default=now)  # ✅ Add default=now
 
     position = models.CharField(
         max_length=100,
