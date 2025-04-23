@@ -1,0 +1,48 @@
+
+/* Product Card Styles */
+.product-card{
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    }
+    
+    .product-card .header{
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+    }
+    
+    .product-card .header img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .product-card .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 95%;
+    }
+    
+    .product-card .footer .name-price{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .product-price,
+    .product-btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+
+    .Not-Price{
+        text-decoration: line-through;
+    }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../global_static/css/style.css">
+    <link rel="stylesheet" href="../../global_static/css/reuse.css">
+    <link rel="stylesheet" href="../../local_static/css/help_css/index.css">
+    <link rel="stylesheet" href="../../local_static/css/help_css/faq_list.css">
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="cards-header">
+            <h1>All FAQs</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search The FAQs">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="cards-header-options">
+                <div class="cards-categories">
+                    <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">FAQs Categories<i class="fa-solid fa-caret-down"></i></button>
+                    <div class="categories-item" id="categories-item">
+                        <ul>
+                            <li class="category active" onclick="toggleCategory(this)">All FAQ's</li>
+                            <li class="category" onclick="toggleCategory(this)">Course FAQ's</li>
+                            <li class="category" onclick="toggleCategory(this)">Sessions FAQ's</li>
+                            <li class="category" onclick="toggleCategory(this)">Study Content FAQ's</li>
+                            <li class="category" onclick="toggleCategory(this)">Other FAQ's</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cards-sort">
+                    <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                    <div class="sort-items" id="sort-items">
+                        <ul>
+                            <li onclick="changeSortOption(this)">Latest FAQ's</li>
+                            <li onclick="changeSortOption(this)">Oldest FAQ's</li>
+                            <li onclick="changeSortOption(this)">Popular FAQ's</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+            <div class="faq-card">
+                <div class="question">
+                    <h2>What is the purpose of this application?</h2>
+                </div>
+                <div class="answer">
+                    <p>This application is designed to help users manage their tasks efficiently and effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

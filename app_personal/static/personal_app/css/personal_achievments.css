@@ -1,0 +1,50 @@
+/* Mentions Card Styles */
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width:300px;
+    gap: 20px;
+  }
+  
+  .image-container{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-hover-color1);
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .image-container img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 10px;
+  }
+  
+  .title-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  
+  .description-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .description-container p{
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .description-container span{
+    font-size: 15px;
+    font-weight: bold;
+  }

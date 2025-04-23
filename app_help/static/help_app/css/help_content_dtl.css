@@ -1,0 +1,48 @@
+
+.latest-contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .latest-contents .latest-content {
+    max-width: 350px;
+    min-width: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .latest-content img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .latest-content h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: var(--sub-title-color1);
+  }
+
+  .doc-viewer {
+    border: 3px solid var(--card-outline-color);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 20px;
+    color: var(--paragraph-color);
+  }
+
+  .doc-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }

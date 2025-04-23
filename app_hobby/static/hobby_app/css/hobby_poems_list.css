@@ -1,0 +1,42 @@
+/*Poem Card styles */
+.poem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    min-width: 300px;
+    gap: 15px;
+}
+
+.poem-card .profile-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.poem-card .profile-image p {
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.poem-card .profile-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--card-outline-color);
+}
+
+.poem-card .poem-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    gap: 15px;
+}
+
+.poem-content .poem p {
+    font-style: italic;
+    text-align: justify;
+}

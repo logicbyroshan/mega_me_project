@@ -1,0 +1,101 @@
+.code-card {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .code-header .level {
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  
+  .level.easy {
+    background-color: #28a745;
+  }
+  
+  .level.medium {
+    background-color: #ffc107;
+  }
+  
+  .level.hard {
+    background-color: #dc3545;
+  }
+  
+  .code-header .platform {
+    padding: 4px 10px;
+    color: #61dafb;
+  }
+  
+  .code-header .qid {
+    padding: 4px 10px;
+    font-style: italic;
+    color: #aaa;
+  }
+  
+  /* Style Prism syntax font */
+  pre {
+    font-family: var(--code-font);
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+pre[class*="language-"],
+code[class*="language-"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+  margin: 0 !important;
+}
+
+.code-card pre::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+  }
+  
+  .code-card pre::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .code-card pre::-webkit-scrollbar-thumb {
+    background-color: var(--card-outline-color);
+    border-radius: 6px;
+  }
+  
+  .code-card pre::-webkit-scrollbar-thumb:hover {
+    background-color: var(--card-hover-color1);
+  }
+  
+.copy-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--card-outline-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    color: var(--card-color);
+}
+
+@media screen and (max-width: 768px) {
+
+    .code-header {
+        align-items: flex-start;
+    }
+    .code-header .level,
+    .code-header .platform,
+    .code-header .qid {
+        margin-bottom: 5px;
+    }
+  
+}

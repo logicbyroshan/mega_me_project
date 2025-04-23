@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Freelance |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'work_app/css/freelance_base.css' %}">
+    <link rel="stylesheet" href="{% static 'work_app/css/freelancce_home.css' %}">
+    <link rel="stylesheet" href="{% static 'work_app/css/freelance_services_list.css' %}">
+    <link rel="stylesheet" href="{% static 'work_app/css/freelance_services_dtl.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'work_app/js/work_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<body>
+
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="logo-side-nav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../../local_static/images/logo.png" alt="Logo" class="logo-img">
+                        <p>Freelance</p>
+                    </a>
+                </div>
+        
+                <div class="nav-item" id="navLinks">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Works</a>
+                    <a href="#">Portfolio</a>
+                </div>
+            </div>
+        
+            <div class="btn-side-nav" id="authSection">
+              <!-- JS will toggle content here based on login -->
+            </div>
+        
+            <div class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+          <!-- Mobile nav -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Works</a>
+            <a href="#">Portfolio</a>
+            <div id="mobileAuth"></div>
+        </div>
+        {% block content %}{% endblock %}
+        <div class="footer">
+            <div class="first-level">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../../local_static/images/logo.png" alt="Logo" class="logo-img">
+                        <p>Freelance</p>
+                    </a>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="second-level">
+                <div class="footer-links">
+                    <h4>Know More</h4>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Personal</a>
+                    <a href="#">Writings</a>
+                    <a href="#">Testimonials</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#">Web Development</a>
+                    <a href="#">App Development</a>
+                    <a href="#">UI/UX Design</a>
+                    <a href="#">SEO Services</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">Works</a>
+                    <a href="#">Contact Now</a>
+                    <a href="#">Lets Start</a>
+                    <a href="#">FAQ's</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <a href="#">Hobbies</a>
+                    <a href="#">Startups</a>
+                    <a href="#">Products</a>
+                    <a href="#">Helpings</a>
+                </div>
+            </div>
+            <div class="third-level">
+                <p>Copyright 2021 Roshan Damor. All Rights Reserved</p>
+                <p>Designed & Developed by Roshan Damor</p>
+                <p> <a href="">Privecy Policy</a> <a href="">Terms & Condition</a></p>
+
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

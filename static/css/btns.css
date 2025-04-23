@@ -1,0 +1,305 @@
+
+/* Awesome Buttons */
+.awesome {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 0;
+    border-radius: 1.5rem;
+    margin: 0;
+    padding: 0.7rem 1rem 0.8rem 2rem;
+    display: inline-flex;
+    background: none;
+    color: var(--sub-title-color1);
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  .awesome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: var(--rounded);
+    background-image: linear-gradient(-45deg, var(--help-color1), transparent 50%);
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0, 0.75, 1), opacity 1s ease;
+  }
+  .awesome::after {
+    content: "❯";
+    display: grid;
+    place-items: center;
+    height: 1em;
+    width: 1em;
+    padding: 4px;
+    margin-left: 0.65rem;
+    border-radius: var(--rounded);
+    background: var(--primary);
+    color: var(--dark);
+    font-size: 0.75em;
+    line-height: 0;
+    transform: translateY(2px);
+    transition: background-color 0.25s ease 0.25s;
+  }
+.awesome:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+.awesome:hover::after {
+    background: var(--light);
+}
+
+/* Shinty Buttons */
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @property --gradient-angle-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @property --gradient-percent {
+    syntax: "<percentage>";
+    initial-value: 5%;
+    inherits: false;
+  }
+  
+  @property --gradient-shine {
+    syntax: "<color>";
+    initial-value: white;
+    inherits: false;
+  }
+  
+  .shiny-cta {
+    --animation: gradient-angle linear infinite;
+    --duration: 3s;
+    --shadow-size: 2px;
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline-offset: 4px;
+    padding: 15px 25px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    border-radius: 360px;
+    color: var(--sub-title-color1);
+    background: linear-gradient(var(--card-hover-color1), var(--card-hover-color1))
+        padding-box,
+      conic-gradient(
+          from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+          transparent,
+          var(--shiny-cta-highlight) var(--gradient-percent),
+          var(--gradient-shine) calc(var(--gradient-percent) * 2),
+          var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+          transparent calc(var(--gradient-percent) * 4)
+        )
+        border-box;
+    box-shadow: inset 0 0 0 1px var(--card-color);
+  
+    &::before,
+    &::after,
+    span::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+    }
+  
+    &:active {
+      translate: 0 1px;
+    }
+  }
+  
+  /* Dots pattern */
+  .shiny-cta::before {
+    --size: calc(100% - var(--shadow-size) * 3);
+    --position: 2px;
+    --space: calc(var(--position) * 2);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+        circle at var(--position) var(--position),
+        white calc(var(--position) / 4),
+        transparent 0
+      )
+      padding-box;
+    background-size: var(--space) var(--space);
+    background-repeat: space;
+    -webkit-mask-image: conic-gradient(
+      from calc(var(--gradient-angle) + 45deg),
+      black,
+      transparent 10% 90%,
+      black
+    );
+            mask-image: conic-gradient(
+      from calc(var(--gradient-angle) + 45deg),
+      black,
+      transparent 10% 90%,
+      black
+    );
+    border-radius: inherit;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  
+  /* Inner shimmer */
+  .shiny-cta::after {
+    --animation: shimmer linear infinite;
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(
+      -50deg,
+      transparent,
+      var(--card-hover-color2),
+      transparent
+    );
+    -webkit-mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+            mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+    opacity: 0.6;
+  }
+  
+  .shiny-cta span {
+    z-index: 1;
+  
+    &::before {
+      --size: calc(100% + 1rem);
+      width: var(--size);
+      height: var(--size);
+      box-shadow: inset 0 -1ex 2rem 4px var(--help-color1);
+      opacity: 0;
+    }
+  }
+  
+  /* Animate */
+  .shiny-cta {
+    --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition: var(--transition);
+    transition-property: --gradient-angle-offset, --gradient-percent,
+      --gradient-shine;
+  
+    &,
+    &::before,
+    &::after {
+      animation: var(--animation) var(--duration),
+        var(--animation) calc(var(--duration) / 0.4) reverse paused;
+      animation-composition: add;
+    }
+  
+    span::before {
+      transition: opacity var(--transition);
+      -webkit-animation: calc(var(--duration) * 1.5) breathe linear infinite;
+              animation: calc(var(--duration) * 1.5) breathe linear infinite;
+    }
+  }
+  
+  .shiny-cta:is(:hover, :focus-visible) {
+    --gradient-percent: 20%;
+    --gradient-angle-offset: 95deg;
+    --gradient-shine: var(--help-color1);
+  
+    &,
+    &::before,
+    &::after {
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+    }
+  
+    span::before {
+      opacity: 1;
+    }
+  }
+
+  .outline-btn {
+    background: transparent;
+    border: 3px solid var(--card-outline-color);
+    color: var(--sub-title-color1);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .outline-btn:hover {
+    border: 3px solid var(--card-hover-color1);
+  }
+  
+  .filled-btn {
+    background: var(--card-color);
+    color: var(--title-color);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    max-width: 100%;
+    width: fit-content;
+    box-sizing: border-box;
+    white-space: normal; /* CHANGED */
+    text-align: center; /* Optional, for better layout */
+    height: fit-content;
+  }
+  
+  .filled-btn:hover {
+    background: var(--card-hover-color2);
+    color: var(--sub-title-color1);
+  }
+
+  @media (max-width: 600px) {
+    .filled-btn,
+    .outline-btn {
+      width: 100%;
+      font-size: 15px;
+      padding: 5px 10px;
+      min-width: unset; /* CHANGED */
+    }
+
+    .outline-btn {
+      border: 2px solid var(--card-outline-color);
+    }
+
+    .shiny-cta {
+      padding: 8px 15px;
+      font-size: 15px;
+    }
+
+    .awesome {
+      padding: 6px 12px;
+      font-size: 18px;
+    }
+  }
+  
+
+  .view-all-btn {
+    background: var(--card-hover-color1);
+    color: var(--title-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+  }
+
+  .view-all-btn:hover {
+    background: var(--card-hover-color2);
+    color: var(--sub-title-color1);
+  }

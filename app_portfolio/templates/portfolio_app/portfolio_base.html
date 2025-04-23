@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Portfolio |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_base.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_home.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_contact.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_experiences_list.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_projects_list.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_skills_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_project_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/portfolio_experience_detail.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'portfolio_app/js/portfolio_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-bars toggle-menu" id="open-btn"></i>
+                <a href="#">
+                    <img src="../../local_static/images/Logo.png" alt="Logo" class="logo-img">
+                    <p>Portfolio</p>
+                </a>
+            </div>
+            <div class="nav-items">
+                <i class="fa-solid fa-xmark toggle-menu" id="close-btn"></i>
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            <div class="nav-btns">
+                <a href="#home" class="outline-btn">Download Resume</a>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <div class="footer">
+            <div class="footer-first-level">
+                <h2>Thank You For Visit My Portfolio</h2>
+            </div>
+            <div class="footer-second-level">
+                <div class="footer-items">
+                    <div class="footer-item-head">
+                        <h3>Explore</h3>
+                    </div>
+                    <div class="footer-item-body">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+    
+                <div class="footer-items">
+                    <div class="footer-item-head">
+                        <h3>Explore</h3>
+                    </div>
+                    <div class="footer-item-body">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+    
+                <div class="footer-items">
+                    <div class="footer-item-head">
+                        <h3>Explore</h3>
+                    </div>
+                    <div class="footer-item-body">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+    
+                <div class="footer-items">
+                    <div class="footer-item-head">
+                        <h3>Explore</h3>
+                    </div>
+                    <div class="footer-item-body">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-third-level">
+                <p>All Rights are Resereved | Designed & Developed by Roshan Damor | © 2023 Roshan Portfolio</p>
+                <div class="first-part">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

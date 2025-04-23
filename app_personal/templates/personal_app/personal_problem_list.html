@@ -1,0 +1,98 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Problems{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Problems</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search the Problems">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Problems Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">DSA Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">Database Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">System Design Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">CP Problems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Oldest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Easy Problems</li>
+                        <li onclick="changeSortOption(this)">Medium Problems</li>
+                        <li onclick="changeSortOption(this)">Hard Problems</li>
+                        <li onclick="changeSortOption(this)">Most Liked Problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="code-card card">
+            <div class="code-header">
+                <span class="level easy">Easy</span>
+                <span class="platform">LeetCode</span>
+                <span class="qid">#001</span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            
+            <pre>
+                <code class="language-python">
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+                </code>
+            </pre>
+        </div>
+
+        <div class="code-card card">
+            <div class="code-header">
+                <span class="level easy">Easy</span>
+                <span class="platform">LeetCode</span>
+                <span class="qid">#001</span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>
+                <code class="language-python">
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+                </code>
+            </pre>
+        </div>
+
+        <div class="code-card card">
+            <div class="code-header">
+                <span class="level easy">Easy</span>
+                <span class="platform">LeetCode</span>
+                <span class="qid">#001</span>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>
+                <code class="language-python">
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+                </code>
+            </pre>
+        </div>
+    </div>
+{% endblock %}

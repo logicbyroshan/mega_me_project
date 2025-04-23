@@ -1,0 +1,111 @@
+{% extends 'portfolio_app/portfolio_base.html' %}
+{% load static %}
+
+{% block title %}Experiences{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Experiences</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search My Experiences">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Experience Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">Developer Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">Design Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">AI-ML Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">Job Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">Internship Experiences</li>
+                        <li class="category" onclick="toggleCategory(this)">Other Projects</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Experience <i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Newest Experience</li>
+                        <li onclick="changeSortOption(this)">Oldest Experience</li>
+                        <li onclick="changeSortOption(this)">Longest Experience</li>
+                        <li onclick="changeSortOption(this)">Shortest Experience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Experience Contianer-->
+    <div class="card-container">
+        <div class="exp-card card" data-url="#">
+            <div class="top-content">
+                <div class="exp-img">
+                    <img src="../../static/images/expi1.png" alt="">
+                </div>                    
+                <h2>Sr. Software Engineer</h2>
+                <div class="date">
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>20th March 2019</p>
+                    </div>
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>30th September 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+            </div>
+        </div>
+
+        <div class="exp-card card" data-url="#">
+            <div class="top-content">
+                <div class="exp-img">
+                    <img src="../../static/images/expi2.png" alt="">
+                </div>                    
+                <h2>Sr. Software Engineer</h2>
+                <div class="date">
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>20th March 2019</p>
+                    </div>
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>30th September 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+            </div>
+        </div>
+
+        <div class="exp-card card" data-url="#">
+            <div class="top-content">
+                <div class="exp-img">
+                    <img src="../../static/images/expi3.png" alt="">
+                </div>
+                <h2>Sr. Software Engineer</h2>
+                <div class="date">
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>20th March 2019</p>
+                    </div>
+                    <div class="start-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>30th September 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,528 @@
+{% extends 'portfolio_app/portfolio_base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="portfolio-container">
+        <div class="home-container">
+            <div class="home-content">
+                <p>HIII, IT'S ME</p>
+                <h1>Roshan Damor</h1>
+                <h4>I am a <span id="skill-text"></span></h4>
+                <p>GREETINGS, ALL DIGITAL EXPLORERS ! I AM ROSHAN, A PASSIONATE AMD INNOVATIVE DEVELOPER DEDICATED TO CRAFTING IMMERSIVE DIGITAL EXPERIENCE, WELCOME TO MY ONLINE WORLD ...</p>
+                <div class="home-btns">
+                    <a href="my-personal/"><button class="outline-btn">KNOW PERSONAL</button></a>
+                    <a href="my-video-resume/"><button class="outline-btn">VIDEO RESUME</button></a>
+                </div>
+                <div class="success">
+                    <div class="success-card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <p>2+ Year of Experience</p>
+                    </div>
+                    <div class="success-card">
+                        <img src="../../static/images/promotion.gif" alt="">
+                        <p>39+ Succesfull Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-hero-image">
+                <img src="../../static/images/MyHero Img.png" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                    <h1>Skills I've <br><span>Learn't</span></h1>
+                    <a href="" class="awesome">View All </a>
+            </div>
+                <p>"I have experience working with a variety of technologies to build efficient and scalable solutions. From frontend development to backend architectures, I enjoy leveraging the right tools for the job. Here’s a breakdown of my key skills:"</p>
+        </div>
+        <div class="cards-container">
+            <div class="skill-card card" data-url="#">
+                <div class="skill-head">
+                    <div class="skill-title">
+                        <div class="skill-image">
+                            <img src="../../static/images/nodejs.png" alt="">
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="progress-card">
+                        <span class="progress-tag1 ">Progress</span>
+                        <span class="progress-tag2 ">Done</span>
+                        <span class="progress-tag3 active">Expert</span>
+                    </div>
+                </div>
+                <div class="skill-content">
+                    <div class="progress-container" data-progress="90">
+                        <div class="progress"></div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                    <div class="skill-links">
+                        <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                        <button class="download-btn view-resources-btn" data-resources='[
+                            {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                            {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                            {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                            {"type": "link", "url": "https://roshandamor.site"}
+                        ]'>View Resources</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="skill-card card" data-url="#">
+                <div class="skill-head">
+                    <div class="skill-title">
+                        <div class="skill-image">
+                            <img src="../../static/images/tailwind.png" alt="">
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="progress-card">
+                        <span class="progress-tag1 active">Progress</span>
+                        <span class="progress-tag2 ">Done</span>
+                        <span class="progress-tag3 ">Expert</span>
+                    </div>
+                </div>
+                <div class="skill-content">
+                    <div class="progress-container" data-progress="90">
+                        <div class="progress"></div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                    <div class="skill-links">
+                        <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                        <button class="download-btn view-resources-btn" data-resources='[
+                            {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                            {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                            {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                            {"type": "link", "url": "https://roshandamor.site"}
+                        ]'>View Resources</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="popup-modal">
+                <div class="modal-content">
+                    <button class="close-btn">Close</button>
+                    <div class="preview-container"></div>
+                </div>
+            </div>            
+    
+            <div class="skill-card card" data-url="#">
+                <div class="skill-head">
+                    <div class="skill-title">
+                        <div class="skill-image">
+                            <img src="../../static/images/typescript.png" alt="">
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="progress-card">
+                        <span class="progress-tag1 ">Progress</span>
+                        <span class="progress-tag2 active">Done</span>
+                        <span class="progress-tag3 ">Expert</span>
+                    </div>
+                </div>
+                <div class="skill-content">
+                    <div class="progress-container" data-progress="90">
+                        <div class="progress"></div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                    <div class="skill-links">
+                        <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                        <button class="download-btn view-resources-btn" data-resources='[
+                            {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                            {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                            {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                            {"type": "link", "url": "https://roshandamor.site"}
+                        ]'>View Resources</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                    <h1>Where I've <br><span>Worked</span></h1>
+                    <a href="" class="awesome">View All </a>
+            </div>                    
+            <p>"Over the years, I have gained hands-on experience in various roles, contributing to impactful projects and collaborating with talented teams. Here’s a glimpse into my professional journey:"</p>
+        </div>
+        <div class="card-container">
+            <div class="exp-card card" data-url="#">
+                <div class="top-content">
+                    <div class="exp-img">
+                        <img src="../../static/images/expi1.png" alt="">
+                    </div>                    
+                    <h2>Sr. Software Engineer</h2>
+                    <div class="date">
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>20th March 2019</p>
+                        </div>
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>30th September 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+                </div>
+            </div>
+    
+            <div class="exp-card card" data-url="#">
+                <div class="top-content">
+                    <div class="exp-img">
+                        <img src="../../static/images/expi2.png" alt="">
+                    </div>                    
+                    <h2>Sr. Software Engineer</h2>
+                    <div class="date">
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>20th March 2019</p>
+                        </div>
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>30th September 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+                </div>
+            </div>
+    
+            <div class="exp-card card" data-url="#">
+                <div class="top-content">
+                    <div class="exp-img">
+                        <img src="../../static/images/expi3.png" alt="">
+                    </div>
+                    <h2>Sr. Software Engineer</h2>
+                    <div class="date">
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>20th March 2019</p>
+                        </div>
+                        <div class="start-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>30th September 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero unde autem? Cum quo odio veritatis rem vero, repudiandae eum possimus ex quam excepturi eaque deleniti. Natus voluptatem animi quos enim nisi aut magnam, consequatur facilis iste accusamus incidunt dolores vitae ut amet consectetur mollitia sint! Dolore dicta ratione sapiente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                    <h1>Things I've <br><span>Built</span></h1>
+                    <a href="" class="awesome">View All </a>
+            </div>
+                <p>"I love turning ideas into reality through code. Here are some of the projects I’ve worked on, ranging from web applications to AI-powered tools. Each project is a reflection of my skills, problem-solving approach, and creativity."</p>
+        </div>
+        <div class="cards-container">
+            <div class="project-card card">
+                <div class="project-image">
+                    <img src="../../static/images/Project 1.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <div class="teg">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>Completion : <span> 24 December 2020</span></p>
+                    </div>
+                    <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                    <div class="skills">
+                        <p>Skills Used : </p>
+                        <span class="teg">HMTL</span>
+                        <span class="teg">CSS</span>
+                        <span class="teg">JavaScript</span>
+                        <span class="teg">Python</span>
+                        <span class="teg">Django</span>
+                        <span class="teg">RestAPI</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="outline-btn">Github</button>
+                        <button class="outline-btn">Documentation</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project-card card">
+                <div class="project-image">
+                    <img src="../../static/images/Project 1.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <div class="teg">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>Completion : <span> 24 December 2020</span></p>
+                    </div>
+                    <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                    <div class="skills">
+                        <p>Skills Used : </p>
+                        <span class="teg">HMTL</span>
+                        <span class="teg">CSS</span>
+                        <span class="teg">JavaScript</span>
+                        <span class="teg">Python</span>
+                        <span class="teg">Django</span>
+                        <span class="teg">RestAPI</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="outline-btn">Github</button>
+                        <button class="outline-btn">Documentation</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project-card card">
+                <div class="project-image">
+                    <img src="../../static/images/Project 1.jpg" alt="">
+                </div>
+                <div class="project-content">
+                    <div class="teg">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>Completion : <span> 24 December 2020</span></p>
+                    </div>
+                    <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                    <div class="skills">
+                        <p>Skills Used : </p>
+                        <span class="teg">HMTL</span>
+                        <span class="teg">CSS</span>
+                        <span class="teg">JavaScript</span>
+                        <span class="teg">Python</span>
+                        <span class="teg">Django</span>
+                        <span class="teg">RestAPI</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="outline-btn">Github</button>
+                        <button class="outline-btn">Documentation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                    <h1>Latest I've <br><span>Written</span></h1>
+                    <a href="" class="awesome">View All </a>
+            </div>
+                <p>"I enjoy sharing insights and experiences through writing. Whether it’s tutorials, case studies, or thoughts on technology, my blog is a space where I document and share my learning. Check out some of my latest posts:"</p>
+        </div>
+        <div class="cards-container">
+            <div class="blog-card card" data-url="blog-detail.html">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span class="teg">Technology</span>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/User2.jpg" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>12</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>250</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="blog-card card" data-url="blog-detail.html">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span class="teg">Technology</span>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/User2.jpg" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>12</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>250</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card card" data-url="blog-detail.html">
+                <div class="blog-image">
+                    <img src="../../static/images/Teachers.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                    <span class="teg">Technology</span>
+                    <div class="date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Read Time: 10 min</p>
+                    </div>
+                    <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="publisher">
+                        <img src="../../static/images/User2.jpg" alt="Publisher">
+                        <p>John Doe</p>
+                    </div>
+                    <div class="comments-likes">
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>12</span>
+                        </a>
+                        <a href="blog-detail.html">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>250</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ's Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                    <h1>Got Some <br><span>Questions?</span></h1>
+            </div>
+                <p>"Here are some common questions I get asked. If you have more queries, feel free to reach out!"</p>
+        </div>
+        <div class="card-container">
+            <div class="faq-card card" data-url="#" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+                <div class="faq-question">
+                    <span>What is Lorem Ipsum?</span>
+                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+
+            <div class="faq-card card" data-url="#" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+                <div class="faq-question">
+                    <span>What is Lorem Ipsum?</span>
+                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+
+            <div class="faq-card card" data-url="#" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+                <div class="faq-question">
+                    <span>What is Lorem Ipsum?</span>
+                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+
+            <div class="faq-card card" data-url="#" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+                <div class="faq-question">
+                    <span>What is Lorem Ipsum?</span>
+                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+
+            <div class="faq-card card" data-url="#" data-open-icon="../../static/images/open.png" data-close-icon="../../static/images/close.png">
+                <div class="faq-question">
+                    <span>What is Lorem Ipsum?</span>
+                    <img src="../../static/images/open.png" class="faq-icon" alt="Expand">
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact Section -->
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="head">
+                <h1>Let's Get <br><span>Connect!</span></h1>
+            </div>                     
+            <p>"Interested in working together, have a question, or just want to say hi? I’d love to hear from you! Feel free to reach out through any of the platforms below."</p>
+        </div>
+        <div class="card-container">
+            <div class="mail-contact-card">
+    
+                <div class="left-contact">
+                    <img src="../../static/images/Newsletter-cuate.svg" alt="">
+                </div>
+                <div class="right-contact">
+                    <div class="contact-form-card">
+                        <form action="#">
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="E-mail">
+                            <textarea name="" id="" cols="30" rows="8" placeholder="Message"></textarea>
+                            <button class="outline-btn">SEND MESSAGE <img src="../../static/images/right-arrow.png" alt=""></button>
+                            <div class="success-massage">
+                                <div class="success" id="success">
+                                    <img src="../../static/images/checked.png" alt="">
+                                    <p>Your message has been sent successfully</p>
+                                </div>
+                                <div class="success" id="error">
+                                    <img src="../../static/images/cancel (1).png" alt="">
+                                    <p>Something went wrong, please try again</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

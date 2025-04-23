@@ -1,0 +1,90 @@
+{% extends 'hobby_app/hobby_base.html' %}
+{% load static %}
+
+{% block title %}Poems{% endblock %}
+
+{% block content %}
+        <div class="hobby-container">
+            <div class="cards-header">
+                <h1>All Poems</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Poems Here">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="cards-header-options">
+                    <div class="cards-categories">
+                        <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Poems Categories<i class="fa-solid fa-caret-down"></i></button>
+                        <div class="categories-item" id="categories-item">
+                            <ul>
+                                <li class="category active" onclick="toggleCategory(this)">All Poems</li>
+                                <li class="category" onclick="toggleCategory(this)">Ghazals</li>
+                                <li class="category" onclick="toggleCategory(this)">Shayri</li>
+                                <li class="category" onclick="toggleCategory(this)">Sher</li>
+                                <li class="category" onclick="toggleCategory(this)">Funny Poems</li>
+                                <li class="category" onclick="toggleCategory(this)">Romentic Poems</li>
+                                <li class="category" onclick="toggleCategory(this)">Other Poms</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cards-sort">
+                        <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Poems<i class="fa-solid fa-caret-down"></i></button>
+                        <div class="sort-items" id="sort-items">
+                            <ul>
+                                <li onclick="changeSortOption(this)">Latest Poems</li>
+                                <li onclick="changeSortOption(this)">Oldest Poems</li>
+                                <li onclick="changeSortOption(this)">Popular Poems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-container">
+                <div class="poem-card card">
+                    <div class="profile-image">
+                        <img src="../../static/images/user1.jpeg" alt="Book Image">
+                        <p>William Shakespeare</p>
+                    </div>
+                    <div class="poem-content">
+                        <p>January 13, 2023</p>
+                        <h2>Botanical Shakspere of the Fire</h2>
+                        <div class="poem">
+                            <p>Shall I compare thee to a summer's day? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit error dicta pariatur aperiam in magnam facilis rem aliquam non laudantium?</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="poem-card card">
+                    <div class="profile-image">
+                        <img src="../../static/images/user1.jpeg" alt="Book Image">
+                        <p>William Shakespeare</p>
+                    </div>
+                    <div class="poem-content">
+                        <p>January 13, 2023</p>
+                        <h2>Botanical Shakspere of the Fire</h2>
+                        <div class="poem">
+                            <p>Shall I compare thee to a summer's day? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit error dicta pariatur aperiam in magnam facilis rem aliquam non laudantium?</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="poem-card card">
+                    <div class="profile-image">
+                        <img src="../../static/images/user1.jpeg" alt="Book Image">
+                        <p>William Shakespeare</p>
+                    </div>
+                    <div class="poem-content">
+                        <p>January 13, 2023</p>
+                        <h2>Botanical Shakspere of the Fire</h2>
+                        <div class="poem">
+                            <p>Shall I compare thee to a summer's day? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit error dicta pariatur aperiam in magnam facilis rem aliquam non laudantium?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

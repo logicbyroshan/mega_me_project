@@ -1,0 +1,96 @@
+
+.story-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 25px;
+    border: 3px solid var(--card-outline-color);
+    background-color: var(--card-color);
+    padding: 15px;
+    gap: 15px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+.story-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.story-card:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.story-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.story-head img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.viewbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: var(--card-outline-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.story-card:hover .viewbtn {
+    opacity: 1;
+}
+
+.viewbtn img {
+    width: 40px;
+    filter: invert(1);
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .story-card {
+        width: calc((100% - 50px) / 2); /* 2 cards with a total 50px gap */
+    }
+}
+
+@media (min-width: 1000px) {
+    .story-card {
+        width: calc((100% - 100px) / 3); /* 3 cards with a total 100px gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .story-card {
+        width: 100%; /* Makes it adaptive */
+    }
+}

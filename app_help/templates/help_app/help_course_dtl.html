@@ -1,0 +1,142 @@
+{% extends 'help_app/help_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ course.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="detail-page-container">
+        <div class="detail-page-detail-card">
+            <div class="course-hero-page">
+                <h1>Python For Everybody Specialization</h1>
+                <p>Lorean to program and Analyze Data with Python, Develope Programs to gether cleas, analyze and vusilize Data.</p>
+                <div class="instructor-profile">
+                    <img src="https://via.placeholder.com/50" alt="Instructor Photo" />
+                    <p>Instructor <span class="tag"><a href="#">Roshan Damor</a></span></p>
+                    </div>
+                    <button class="enroll-btn">
+                    Enroll For Free
+                    <span class="subtext">Starts Apr 22</span>
+                    </button>
+                    <p class="enrolled-count"><span>17,719</span> already enrolled</p>
+            </div>
+            <img src="../../local_static/images/course-image.png" alt="Titile Image" class="blog-image">
+            <div class="cours-detail-card">
+                <div class="course-d-card card">
+                    <h3><span>4.6</span><i class="fa-solid fa-star"></i></h3>
+                    <p>(2144 Reviews)</p>
+                </div>
+                <div class="course-d-card card">
+                    <h3><span>Flexible schedule</span><i class="fa-solid fa-calendar-check"></i></h3>
+                    <p>2 Months, 10 Hours a week</p>
+                </div>
+                <div class="course-d-card card">
+                    <h3><span>Earn Certificate</span><i class="fa-solid fa-id-card"></i></h3>
+                    <p>Get Globally Recognzed Certificate</p>
+                </div>
+            </div>
+            <div class="tiny-mce-content-detailed">
+                <h1>Welcome to My Blog</h1>
+                <p>This is a sample blog post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test blog. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+            <section class="testimonial-section">
+                <h2 class="section-title">What Our Students Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card card">
+                        <p>"This mentorship changed my perspective and helped me land my first internship!"</p>
+                        <h4>- Aryan, B.Tech CSE</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"Incredible sessions. Clear roadmap, real guidance, and lots of motivation."</p>
+                        <h4>- Neha, MBA Student</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"The personalized mentorship gave me clarity on my career goals. Loved it!"</p>
+                        <h4>- Ravi, UPSC Aspirant</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"The personalized mentorship gave me clarity on my career goals. Loved it!"</p>
+                        <h4>- Ravi, UPSC Aspirant</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="detail-page-side-card">
+
+            <div class="detail-page-side-card1">
+                <h1>Latest Course</h1>
+                <div class="latest-courses">
+                    <div class="latest-course card">
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                    <div class="latest-course card">
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

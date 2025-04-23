@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'app_work',
     'app_venture',
     'tinymce',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TinyMCE Configuration
 TINYMCE_DEFAULT_CONFIG = {
-    'height': 500,
+    'height': '90vh',
     'width': '100%',
     'menubar': 'file edit view insert format tools table help',
     'plugins': (

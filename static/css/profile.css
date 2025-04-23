@@ -1,0 +1,532 @@
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 20px;
+}
+
+.sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 35%;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+}
+.content-profile {
+  min-width: 300px;
+  max-width: 65%;
+  width: 100%;
+  background-color: var(--card-color);
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--card-outline-color);
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+.profile-card img {
+  width: 130px;
+  max-height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.profilecaard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 60%;
+}
+
+.profile-card h2 {
+  font-size: 20px;
+  margin: 0;
+  color: var(--title-color);
+}
+.profile-card p {
+  margin: 0;
+}
+
+.profile-details {
+  padding: 10px;
+  border: 2px solid var(--card-outline-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding-right: 50px; /* space for the edit button */
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.editable {
+  position: relative;
+  z-index: 1;
+}
+
+.edit-btn {
+  background-color: transparent;
+  color: var(--card-outline-color);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  font-weight: 600;
+  right: 10px;
+  top: 0;
+  z-index: 3;
+}
+
+.edit-btn:hover {
+  color: var(--portfolio-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.edit-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1em;
+  padding: 4px 8px;
+  z-index: 5;
+  border: 1px solid var(--card-outline-color);
+  background-color: var(--card-color);
+  color: var(--title-color);
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-btn {
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn {
+  background-color: orange;
+}
+
+.profile-btn:hover {
+  background-color: rgb(255, 136, 24);
+}
+
+.delete-btn {
+  background-color: red;
+}
+
+.delete-btn:hover {
+  background-color: rgb(218, 0, 0);
+}
+
+#blog {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#freelance{
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#store {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card-content .profile-header ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  list-style-type: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-card-content .profile-header ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: var(--card-outline-color);
+  color: var(--title-color);
+}
+
+.profile-card-content .profile-header ul li:hover {
+  background-color: var(--portfolio-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.profile-content-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--card-color);
+  border: 2px solid var(--card-outline-color);
+  margin-top: 25px;
+}
+
+.profile-content-card img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-content-card .pro-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  gap: 10px;
+}
+
+.pro-card-content h3 {
+  font-size: 20px;
+  margin: 0;
+  color: var(--title-color);
+}
+
+/* Freelance Css */
+.start-new-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+
+}
+
+.start-new-work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  border: var(--card-outline-color) 2px solid;
+}
+
+.new-work-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  border-radius: 15px;
+}
+
+.new-work-card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--card-outline-color);
+  outline: none;
+  border: none;
+}
+
+.new-work-card input::placeholder {
+  color: var(--title-color);
+  font-size: 20px;
+}
+
+.new-work-card input:focus {
+  outline: none;
+  border: none;
+}
+
+.new-work-card textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--card-outline-color);
+  outline: none;
+  border: none;
+  resize: none;
+  height: 200px;
+}
+
+.new-work-card textarea::placeholder {
+  font-size: 20px;
+  color: var(--title-color);
+}
+
+.post-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+}
+
+.post-review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  border: var(--card-outline-color) 2px solid;
+}
+
+/* Store CSs */
+.cupon-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+  border-radius: 10px;
+  border: var(--card-outline-color) 2px solid;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+
+.cupon-card .cupon-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px;
+}
+
+.cupon-card .cupon-card-content h3 {
+  font-size: 20px;
+  color: var(--sub-title-color1);
+}
+
+.cupon-card .cupon-card-content p {
+  font-size: 14px;
+  color: var(--paragraph-color);
+}
+
+.cupon-card .cupon-card-content p span {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--paragraph-color);
+  margin-right: 3px;
+  
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--card-outline-color);
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  padding-top: 15px;
+
+}
+
+.custom-checkbox:checked {
+  background-color: rgb(175, 255, 175);
+}
+
+#coupon {
+  width: fit-content;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px dashed var(--card-outline-color);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--sub-title-color1);
+  background-color: transparent;
+  position: relative;
+}
+
+.store-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border: var(--card-outline-color) 2px solid;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.address-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+/* Curse css */
+.course-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--card-outline-color);
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.progress-bg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.course-status {
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: var(--card-outline-color);
+  height: fit-content;
+
+}
+
+.course-status.done {
+  color: #155724;
+}
+
+.course-status.not-started {
+  color: #721c24;
+}
+
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+    
+  .sidebar-profile {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-btn {
+    padding: 6px 12px;
+  }
+
+  .content-profile {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .profile-content-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-content-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .profile-content-card .pro-card-content h3 {
+    font-size: 18px;
+  }
+
+  .course-status {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .profile-card-content .profile-header ul {
+    padding: 5px 10px;
+  }
+
+  .new-work-card input::placeholder {
+    font-size: 10px;
+  }
+
+  .new-work-card textarea::placeholder {
+    font-size: 10px;
+  }
+
+
+  #coupon {
+    padding: 6px 12px;
+  }
+}

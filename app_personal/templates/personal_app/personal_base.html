@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Personal |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_base.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_home.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_aboutme.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_achievments.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_education.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_leaderboard.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_mentions.css' %}">
+    <link rel="stylesheet" href="{% static 'personal_app/css/personal_problems.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'personal_app/js/personal_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  </head>
+  <body>
+    <div class="main-container">
+        <nav>
+            <!-- Checkbox for toggling menu -->
+            <div class="logo">
+                <a href="#"><img src="../../local_static/images/Logo.png" alt="Logo"></a>
+                <p>Personal</p>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li class="menu-close">
+                    <label for="check" class="closebtn">
+                        <i class="fas fa-xmark"></i>
+                    </label>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            
+        </nav>
+        {% block content %}{% endblock %}
+        <!-- Footer-->
+        <section class="footer-per">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul class="links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Achievements</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Problems</a></li>
+                            <li><a href="#">Mentions</a></li>
+                            <li><a href="#">Gallery</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-col">
+                        <h4>Explore More</h4>
+                        <ul class="links">
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Startup Ideas</a></li>
+                        <li><a href="#">Freelance Services</a></li>
+                        <li><a href="#">My Hobbies</a></li>
+                        <li><a href="#">Dev Helps</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul class="links">
+                            <li><a href="#">Roshan.site</a></li>
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Me Manager</a></li>
+                            <li><a href="#">Leader Boards</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Send me a message and I will get back to you as soon as possible.
+                        </p>
+                        <form action="#">
+                        <input type="text" placeholder="Start Messaging" required>
+                        <button type="submit">Send</button>
+                        </form>
+                        <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github"></i>
+                        </div>
+                    </div>
+                </div>
+          </section>
+    </div>
+    
+  </body>
+</html>

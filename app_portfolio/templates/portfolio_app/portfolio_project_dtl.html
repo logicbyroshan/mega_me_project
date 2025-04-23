@@ -1,0 +1,184 @@
+{% extends 'portfolio_app/portfolio_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ project.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="detail-page-container">
+        <div class="detail-page-detail-card">
+            <div class="detail-page-header">
+                <p class="teg">Category : <span> Design</span></p>
+                <p class="teg"><i class="fa-regular fa-calendar-check"></i>Completion : <span> Jan 23, 2025</span></p>
+                <p class="teg"><i class="fa-regular fa-calendar-check"></i>Read Time : <span> 10 min</span></p>
+            </div>
+            <h1 class="project-title">UX In The Age of AI/ML</h1>
+            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas laboriosam qui nemo numquam voluptate.</p>
+            <div class="project-tags">
+                <span class="teg">AI</span>
+                <span class="teg">ML</span>
+                <span class="teg">UI-UX</span>
+                <span class="teg">Full Stack</span>
+                <span class="teg">Design</span>
+            </div>
+
+            <div class="hero-image-slider">
+                <div class="slider">
+                    <div class="slide"><img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="Project Image"></div>
+                    <div class="slide"><img src="../../local_static/images/My Thumnail.jpg" alt="Project Image"></div>
+                    <div class="slide"><img src="../../local_static/images/TempThumbnail.jpg" alt="Project Image"></div>
+                </div>
+            
+                <!-- Navigation Buttons (Images Kept) -->
+                <button class="prev">
+                    <i class="fa-solid fa-angles-left"></i>
+                </button>
+                <button class="next">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
+            </div>
+            
+            <div class="project-skills">
+                <h1>Skills :</h1>
+                <div class="project-skills-list">
+                    <span class="teg"><img src="../../static/images/javascript.png" alt="">HTML</span>
+                    <span class="teg"><img src="../../static/images/css.png" alt="">CSS</span>
+                    <span class="teg"><img src="../../static/images/jquery.png" alt="">JavaScript</span>
+                    <span class="teg"><img src="../../static/images/react.png" alt="">React</span>
+                    <span class="teg"><img src="../../static/images/nodejs.png" alt="">Node.js</span>
+                    <span class="teg"><img src="../../static/images/python (1).png" alt="">Python</span>
+                    <span class="teg"><img src="../../static/images/sql.png" alt="">Django</span>
+                    <span class="teg"><img src="../../static/images/typescript.png" alt="">Flask</span>
+                    <span class="teg"><img src="../../static/images/mongo-db.png" alt="">Machine Learning</span>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="heading">
+                    <h1>Features :</h1>
+                </div>
+                <ul class="features-list">
+                    <li class="feature-card card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
+                        </div>
+                    </li>
+                    <li class="feature-card card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
+                        </div>
+                    </li>
+                    <li class="feature-card card">
+                        <img src="../../static/images/projects.gif" alt="">
+                        <div class="feature-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem unde doloremque, reprehenderit incidunt minima, repudiandae iure dignissimos officia repellat eveniet ad vero blanditiis corrupti.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tiny-mce-content-detailed">
+                <h1>Welcome to My project</h1>
+                <p>This is a sample project post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="../../static/images/Ariba Agrifarm.jpg" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test project. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+        </div>
+        <div class="detail-page-side-card">
+            <div class="detail-page-side-card1">
+                <img src="../../static/images/user1.jpeg" alt="">
+                <div class="project-links">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                </div>
+                <h1>Roshan Damor</h1>
+            </div>
+            <div class="detail-page-side-card1">
+                <h1>Latest projects</h1>
+                <div class="latest-projects">
+                    <div class="latest-project card">
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                    <div class="latest-project card">
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                    <div class="latest-project card">
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

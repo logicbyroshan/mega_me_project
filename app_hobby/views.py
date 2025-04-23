@@ -1,7 +1,24 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import JsonResponse, HttpResponse
-from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView, ListView
+from .models import Book, Poem, Product
 
-# Home Page
-def home(request):
-    return render(request, 'home.html')
+# Hobby Home Page
+class HobbyHomeView(TemplateView):
+    template_name = "hobby_app/hobby_home.html"
+
+# Book List View
+class BookListView(ListView):
+    model = Book
+    template_name = "hobby_app/hobby_book_list.html"
+    context_object_name = "books"
+
+# Poem List View
+class PoemListView(ListView):
+    model = Poem
+    template_name = "hobby_app/hobby_poem_list.html"
+    context_object_name = "poems"
+
+# Product List View
+class ProductListView(ListView):
+    model = Product
+    template_name = "hobby_app/hobby_product_list.html"
+    context_object_name = "products"

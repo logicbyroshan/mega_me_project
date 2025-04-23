@@ -1,0 +1,457 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="aboutme-container">
+        <div class="image">
+            <span style="--i:1"><img src="../../static/assets/My Image/Roshan Damor Image 1.jpg"></span>
+            <span style="--i:2"><img src="../../static/assets/My Image/Roshan Damor Image 2.jpg"></span>
+            <span style="--i:3"><img src="../../static/assets/My Image/Roshan Damor Image 3.jpg"></span>
+            <span style="--i:4"><img src="../../static/assets/My Image/Roshan Damor Image 4.jpg"></span>
+            <span style="--i:5"><img src="../../static/assets/My Image/Roshan Damor Image 5.jpg"></span>
+            <span style="--i:6"><img src="../../static/assets/My Image/Roshan Damor Image 6.jpg"></span>
+            <span style="--i:7"><img src="../../static/assets/My Image/Roshan Damor Image 7.jpg"></span>
+            <span style="--i:8"><img src="../../static/assets/My Image/Roshan Damor Image 8.jpg"></span>
+            <span style="--i:9"><img src="../../static/assets/My Image/Roshan Damor Image 9.jpg"></span>
+            <span style="--i:10"><img src="../../static/assets/My Image/Roshan Damor Image 10.jpg"></span>
+        </div>
+        <div class="aboutme">
+            <h1>About Me</h1>
+            <h3>I'm a python - django backend developer interested in data science and AI ML</h3>
+            <p>I'm passionate about exploring the transformative realms of Artificial Intelligence, Machine Learning, and Entrepreneurship. As a Computer Science and Engineering student at UIT-RGPV Bhopal, my goal is to secure a placement in the AI/Ml domain while gaining hands-on experience through internships.</p>
+            <div class="my-btns">
+                <a href=""><button class="outline-btn">See My Achievements</button></a>
+                <a href=""><button class="outline-btn">Collaborate with Me</button></a>
+                <a href=""><button class="outline-btn">Get in Touch to Me</button></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Leaderboards</h1>
+            <p>An overview of my academic background, the institutions I've studied at, and the knowledge I’ve gained along the way that built my foundation.</p>
+        </div>
+        <div class="card-container">
+            <div class="leaderboard-card">
+                <h2>Codeforces</h2>
+                <p>Rank: <span>5000</span></p>
+                <p>Rating: <span>200</span></p>
+                <p>Contests Participated: <span>25</span></p>
+                <p>Problems Solved: <span>560</span></p>
+                <button class="outline-btn">View Profile</button>
+            </div>
+
+            <div class="leaderboard-card">
+                <h2>Codeforces</h2>
+                <p>Rank: <span>5000</span></p>
+                <p>Rating: <span>200</span></p>
+                <p>Contests Participated: <span>25</span></p>
+                <p>Problems Solved: <span>560</span></p>
+                <button class="outline-btn">View Profile</button>
+            </div>
+
+            <div class="leaderboard-card">
+                <h2>Codeforces</h2>
+                <p>Rank: <span>5000</span></p>
+                <p>Rating: <span>200</span></p>
+                <p>Contests Participated: <span>25</span></p>
+                <p>Problems Solved: <span>560</span></p>
+                <button class="outline-btn">View Profile</button>
+            </div>
+
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Educations</h1>
+            <p>An overview of my academic background, the institutions I've studied at, and the knowledge I’ve gained along the way that built my foundation.</p>
+        </div>
+        <div class="cards-container">
+            <div class="edu-card card">
+                <div class="edu-image">
+                    <img src="../../static/images/School-Image.jpg" alt="">
+                </div>
+                <div class="edu-content">
+                    <div class="teg">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <p>2025-03-09</p>
+                    </div>
+                    <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                    <div class="skills">
+                        <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                    </div>
+                    <div class="edu-links">
+                        <button class="outline-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="edu-card card">
+                <div class="edu-image">
+                    <img src="../../static/images/institute.jpg" alt="">
+                </div>
+                <div class="edu-content">
+                    <div class="teg">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <p>2025-03-09</p>
+                    </div>
+                    <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                    <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                    <div class="edu-links">
+                        <button class="outline-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="edu-card card">
+                <div class="edu-image">
+                    <img src="../../static/images/College-Image.jpg" alt="">
+                </div>
+                <div class="edu-content">
+                    <div class="teg">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2022-01-01</p>
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <p>2025-03-09</p>
+                    </div>
+                    <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                    <div class="skills">
+                        <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                    </div>
+                    <div class="edu-links">
+                        <button class="outline-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Achievements</h1>
+            <p>Highlights of my key accomplishments, awards, and recognitions that reflect my dedication, hard work, and growth across different domains.</p>
+        </div>
+        <div class="cards-container">
+            <div class="container card">
+                <div class="image-container">
+                    <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+                </div>
+                <div class="title-container">
+                    <h3>SIH WINNER</h3>
+                    <h3>|</h3>
+                    <h3>23 Dec 2024</h3>
+                </div>
+                <div class="description-container">
+                    <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+                </div>
+                <div class="outline-btn">Details</div>
+            </div>
+    
+            <div class="container card">
+                <div class="image-container">
+                    <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+                </div>
+                <div class="title-container">
+                    <h3>SIH WINNER</h3>
+                    <h3>|</h3>
+                    <h3>23 Dec 2024</h3>
+                </div>
+                <div class="description-container">
+                    <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+                </div>
+                <div class="outline-btn">Details</div>
+            </div>
+    
+            <div class="container card">
+                <div class="image-container">
+                    <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+                </div>
+                <div class="title-container">
+                    <h3>SIH WINNER</h3>
+                    <h3>|</h3>
+                    <h3>23 Dec 2024</h3>
+                </div>
+                <div class="description-container">
+                    <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+                </div>
+                <div class="outline-btn">Details</div>
+            </div>
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Mentions</h1>
+            <p>Places where my work or efforts have been acknowledged — from media features to community shoutouts and public recognitions.</p>
+        </div>
+        <div class="cards-container">
+            <div class="mention-card card">
+                <div class="mention-header">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="platform">Twitter</span>
+                    <span class="date">Apr 12, 2025</span>
+                </div>
+                
+                <div class="mention-body">
+                    <p><strong>@tech_guru</strong> mentioned you: <br>
+                    “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                    <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                </div>
+                
+                <div class="mention-footer">
+                    <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+                </div>
+            </div>
+
+            <div class="mention-card card">
+                <div class="mention-header">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="platform">Twitter</span>
+                    <span class="date">Apr 12, 2025</span>
+                </div>
+                
+                <div class="mention-body">
+                    <p><strong>@tech_guru</strong> mentioned you: <br>
+                    “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                    <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                </div>
+                
+                <div class="mention-footer">
+                    <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+                </div>
+            </div>
+
+            <div class="mention-card card">
+                <div class="mention-header">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="platform">Twitter</span>
+                    <span class="date">Apr 12, 2025</span>
+                </div>
+                
+                <div class="mention-body">
+                    <p><strong>@tech_guru</strong> mentioned you: <br>
+                    “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                    <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                </div>
+                
+                <div class="mention-footer">
+                    <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+                </div>
+            </div>
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Problems</h1>
+            <p>Real-world challenges I've identified and worked on solving — showcasing my problem-solving mindset, creativity, and technical skills.</p>
+        </div>
+        <div class="cards-container">
+            <div class="code-card card">
+                <div class="code-header">
+                    <span class="level easy">Easy</span>
+                    <span class="platform">LeetCode</span>
+                    <span class="qid">#001</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                
+                <pre>
+                    <code class="language-python">
+    def two_sum(nums, target):
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                    </code>
+                </pre>
+            </div>
+    
+            <div class="code-card card">
+                <div class="code-header">
+                    <span class="level easy">Easy</span>
+                    <span class="platform">LeetCode</span>
+                    <span class="qid">#001</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <pre>
+                    <code class="language-python">
+    def two_sum(nums, target):
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                    </code>
+                </pre>
+            </div>
+    
+            <div class="code-card card">
+                <div class="code-header">
+                    <span class="level easy">Easy</span>
+                    <span class="platform">LeetCode</span>
+                    <span class="qid">#001</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <pre>
+                    <code class="language-python">
+    def two_sum(nums, target):
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="personal-container">
+        <div class="personal-header">
+            <h1>Gallery</h1>
+            <p>A curated collection of photos and moments that capture my journey, from projects and events to personal milestones and memories.</p>
+        </div>
+        <div class="card1-container">
+            <div class="photograph-card">
+                <div class="photo-conent">
+                    <div class="left-top">
+                        <div class="save-btn">
+                            <img src="../../static/images/saved.png" alt="">
+                        </div>
+                        <div class="like-btn">
+                            <img src="../../static/images/likee.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-top">
+                        <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                        <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                    </div>
+                    <div class="left-bottom">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="right-bottom">
+                        <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                        <a href=""><img src="../../static/images/add.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="../../static/images/model.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="photograph-card">
+                <div class="photo-conent">
+                    <div class="left-top">
+                        <div class="save-btn">
+                            <img src="../../static/images/saved.png" alt="">
+                        </div>
+                        <div class="like-btn">
+                            <img src="../../static/images/likee.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-top">
+                        <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                        <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                    </div>
+                    <div class="left-bottom">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="right-bottom">
+                        <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                        <a href=""><img src="../../static/images/add.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="../../static/images/model.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="photograph-card">
+                <div class="photo-conent">
+                    <div class="left-top">
+                        <div class="save-btn">
+                            <img src="../../static/images/saved.png" alt="">
+                        </div>
+                        <div class="like-btn">
+                            <img src="../../static/images/likee.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-top">
+                        <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                        <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                    </div>
+                    <div class="left-bottom">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="right-bottom">
+                        <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                        <a href=""><img src="../../static/images/add.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="../../static/images/model.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="photograph-card">
+                <div class="photo-conent">
+                    <div class="left-top">
+                        <div class="save-btn">
+                            <img src="../../static/images/saved.png" alt="">
+                        </div>
+                        <div class="like-btn">
+                            <img src="../../static/images/likee.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-top">
+                        <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                        <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                    </div>
+                    <div class="left-bottom">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="right-bottom">
+                        <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                        <a href=""><img src="../../static/images/add.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="../../static/images/model.jpg" alt="">
+                </div>
+            </div>
+    
+        </div>
+        <div class="personal-footer">
+            <a href="#"><button class="outline-btn">More</button></a>
+        </div>
+    </div>
+{% endblock %}

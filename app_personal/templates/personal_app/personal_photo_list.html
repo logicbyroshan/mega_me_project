@@ -1,0 +1,156 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>My Gallery</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search the Photos">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Gallery Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Pics</li>
+                        <li class="category" onclick="toggleCategory(this)">Potraits</li>
+                        <li class="category" onclick="toggleCategory(this)">Professional</li>
+                        <li class="category" onclick="toggleCategory(this)">Photography</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Pics</li>
+                        <li onclick="changeSortOption(this)">Oldest Pics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card1-container">
+        <div class="photograph-card">
+            <div class="photo-conent">
+                <div class="left-top">
+                    <div class="save-btn">
+                        <img src="../../static/images/saved.png" alt="">
+                    </div>
+                    <div class="like-btn">
+                        <img src="../../static/images/likee.png" alt="">
+                    </div>
+                </div>
+                <div class="right-top">
+                    <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                    <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                </div>
+                <div class="left-bottom">
+                    <span>tag1</span>
+                    <span>tag2</span>
+                    <span>tag3</span>
+                </div>
+                <div class="right-bottom">
+                    <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                    <a href=""><img src="../../static/images/add.png" alt=""></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="../../static/images/model.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="photograph-card">
+            <div class="photo-conent">
+                <div class="left-top">
+                    <div class="save-btn">
+                        <img src="../../static/images/saved.png" alt="">
+                    </div>
+                    <div class="like-btn">
+                        <img src="../../static/images/likee.png" alt="">
+                    </div>
+                </div>
+                <div class="right-top">
+                    <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                    <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                </div>
+                <div class="left-bottom">
+                    <span>tag1</span>
+                    <span>tag2</span>
+                    <span>tag3</span>
+                </div>
+                <div class="right-bottom">
+                    <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                    <a href=""><img src="../../static/images/add.png" alt=""></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="../../static/images/model.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="photograph-card">
+            <div class="photo-conent">
+                <div class="left-top">
+                    <div class="save-btn">
+                        <img src="../../static/images/saved.png" alt="">
+                    </div>
+                    <div class="like-btn">
+                        <img src="../../static/images/likee.png" alt="">
+                    </div>
+                </div>
+                <div class="right-top">
+                    <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                    <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                </div>
+                <div class="left-bottom">
+                    <span>tag1</span>
+                    <span>tag2</span>
+                    <span>tag3</span>
+                </div>
+                <div class="right-bottom">
+                    <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                    <a href=""><img src="../../static/images/add.png" alt=""></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="../../static/images/model.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="photograph-card">
+            <div class="photo-conent">
+                <div class="left-top">
+                    <div class="save-btn">
+                        <img src="../../static/images/saved.png" alt="">
+                    </div>
+                    <div class="like-btn">
+                        <img src="../../static/images/likee.png" alt="">
+                    </div>
+                </div>
+                <div class="right-top">
+                    <a href=""><img src="../../static/images/instagram.png" alt=""></a>
+                    <a href=""><img src="../../static/images/pinterest.png" alt=""></a>
+                </div>
+                <div class="left-bottom">
+                    <span>tag1</span>
+                    <span>tag2</span>
+                    <span>tag3</span>
+                </div>
+                <div class="right-bottom">
+                    <a href=""><img src="../../static/images/forward.png" alt=""></a>
+                    <a href=""><img src="../../static/images/add.png" alt=""></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="../../static/images/model.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

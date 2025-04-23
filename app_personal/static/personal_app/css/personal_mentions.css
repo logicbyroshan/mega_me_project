@@ -1,0 +1,43 @@
+/* Mentions Card Styles */
+.mention-card {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mention-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mention-header .platform {
+    font-weight: bold;
+    color: var(--title-color);
+  }
+  
+  
+  .mention-body {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.5;
+    gap: 10px;
+  }
+
+  .mention-body img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .mention-footer a {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .mention-footer a:hover {
+    text-decoration: underline;
+  }
+  

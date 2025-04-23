@@ -1,0 +1,572 @@
+.my-blogs-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+
+}
+
+.my-blogs-categories .category-header {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-header h1 {
+    font-size: 50px;
+    line-height: 1;
+    color: var(--title-color);
+    letter-spacing: 2px;
+}
+
+.my-blogs-categories .categories-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+.categories-cards .category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.category-card img {
+    width: 255px;
+    height: 255px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category-card h2 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1;
+    color: var(--sub-title-color1);
+    letter-spacing: 2px;
+}
+
+.category-card p {
+    text-align: center;
+}
+
+
+/* Author Spotlight Section */
+.author-spotlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.author-spotlight .author-spotlight-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.author-spotlight-content h3 {
+    font-family: var(--special-font);
+    font-size: 35px;
+    color: var(--sub-title-color2);
+}
+
+.author-spotlight-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    font-family: var(--blog-head-font);
+    color: var(--title-color);
+}
+
+.author-spotlight .author-spotlight-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: solid 3px var(--card-outline-color);
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.author-spotlight img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Subscribe Section */
+.blog-subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.subscribe-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    gap: 10px;
+}
+.subscribe-content h1 {
+    color: var(--title-color);
+    font-size: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.subscribe-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: solid 1px var(--paragraph-color);
+    border-radius: 50px;
+    padding: 8px;
+    width: fit-content;
+}
+.subscribe-form input {
+    width: 500px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+    color: var(--paragraph-color);
+    text-align: left;
+}
+
+.subscribe-form input::placeholder {
+    color: var(--paragraph-color);
+}
+
+.subscribe-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 150px;
+}
+
+.subscribe-btn:hover {
+    background: var(--paragraph-color);
+}
+
+/* Latest Blogs Section */
+.latest-blogs-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    gap: 50px;
+}
+
+.latest-blogs-section .latest-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+}
+
+.latest-header h1 {
+    width: 50%;
+    font-size: 50px;
+    line-height: 1;
+    color: var(--title-color);
+}
+
+.latest-blogs-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.latest-blogs-card {
+    flex: 1 1 300px; /* Grow/shrink but not below 300px */
+    max-width: 400px;
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 20px;
+}
+
+
+.latest-blogs-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.latest-blogs-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.latest-blogs-image span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.latest-blogs-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.latest-blogs-content h2 {
+    color: var(--sub-title-color1);
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.latest-blogs-content p span {
+    font-weight: bold;
+}
+
+.latest-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest-bottom .date,
+.latest-bottom .time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.latest-bottom img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+}
+
+.latest-blogs-cards-big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.latest-blogs-card2 {
+    flex: 1 1 300px;
+    max-width: 625px;
+    min-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.latest-blogs-image2 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.latest-blogs-image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.latest-blogs-image2 span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.latest-blogs-content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.latest-blogs-content2 h2 {
+    color: var(--sub-title-color1);
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+
+.latest-bottom2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest-bottom2 .date2,
+.latest-bottom2 .time2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.latest-bottom2 img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .my-blogs-categories .category-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .author-spotlight {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .author-spotlight .author-spotlight-content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .author-spotlight .author-spotlight-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .latest-blogs-card2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .latest-blogs-content2 h2 {
+        font-size: 25px;
+    }
+
+    .latest-blogs-card2 p {
+        font-size: 14px;
+    }
+
+    .latest-blogs-image2 {
+        height: 200px;
+    }
+
+    .latest-blogs-image2 span {
+        font-size: 14px;
+    }
+
+    .latest-blogs-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .latest-bottom2 {
+        font-size: 12px;
+    }
+
+    .latest-blogs-card .latest-bottom2 .date2,
+    .latest-blogs-card .latest-bottom2 .time2 {
+        gap: 5px;
+    }
+
+    .latest-blogs-card .latest-bottom2 .time2 img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .latest-blogs-card .latest-bottom2 .date2 img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .my-blogs-categories {
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .category-header h1, 
+    .subscribe-content h1, 
+    .author-spotlight-content h1, 
+    .latest-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .category-card h2, .author-spotlight-content h3 {
+        font-size: 2rem;
+    }
+
+    .category-card p, 
+    .author-spotlight-content p, 
+    .subscribe-content p {
+        font-size: 1rem;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .subscribe-form input {
+        width: 90%;
+        text-align: center;
+    }
+
+    .subscribe-btn {
+        width: 90%;
+    }
+
+    .latest-blogs-section {
+        gap: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .my-blogs-categories {
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .category-header h1, 
+    .subscribe-content h1, 
+    .author-spotlight-content h1, 
+    .latest-header h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .category-card h2, .author-spotlight-content h3 {
+        font-size: 2rem;
+    }
+
+    .category-card p, 
+    .author-spotlight-content p, 
+    .subscribe-content p {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        border: none;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--paragraph-color);
+    }
+
+    .subscribe-btn {
+        width: 100%;
+    }
+
+    .latest-blogs-section {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .category-card {
+        max-width: 100%;
+    }
+
+    .blog-subscribe {
+        padding: 10px;
+    }
+
+    .subscribe-content h1, 
+    .author-spotlight-content h1{
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .category-header h1, .latest-header h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .category-card h2, .author-spotlight-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .category-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author-spotlight {
+        gap: 30px;
+    }
+
+    .author-spotlight-image {
+        height: 300px;
+    }
+
+}

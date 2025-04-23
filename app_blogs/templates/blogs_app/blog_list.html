@@ -1,0 +1,142 @@
+{% extends 'blogs_app/blog_base.html' %}
+{% load static %}
+
+{% block title %} All Blogs{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Blogs</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Your Content">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Blog Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Blogs</li>
+                        <li class="category" onclick="toggleCategory(this)">Tech Blogs</li>
+                        <li class="category" onclick="toggleCategory(this)">Job Blogs</li>
+                        <li class="category" onclick="toggleCategory(this)">Educational Blog</li>
+                        <li class="category" onclick="toggleCategory(this)">AI-ML Blogs</li>
+                        <li class="category" onclick="toggleCategory(this)">Food Blogs</li>
+                        <li class="category" onclick="toggleCategory(this)">Travel Blogs</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Blogs</li>
+                        <li onclick="changeSortOption(this)">Oldest Blogs</li>
+                        <li onclick="changeSortOption(this)">Popular Blogs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Cards Container-->
+    <div class="cards-container">
+        <div class="blog-card card" data-url="blog-detail.html">
+            <div class="blog-image">
+                <img src="../../static/images/Teachers.jpg" alt="">
+            </div>
+            <div class="blog-content">
+                <span class="teg">Technology</span>
+                <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-regular fa-clock"></i>
+                    <p>Read Time: 10 min</p>
+                </div>
+                <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+            </div>
+            <div class="blog-footer">
+                <div class="publisher">
+                    <img src="../../static/images/User2.jpg" alt="Publisher">
+                    <p>John Doe</p>
+                </div>
+                <div class="comments-likes">
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>12</span>
+                    </a>
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>250</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-card card" data-url="blog-detail.html">
+            <div class="blog-image">
+                <img src="../../static/images/Teachers.jpg" alt="">
+            </div>
+            <div class="blog-content">
+                <span class="teg">Technology</span>
+                <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-regular fa-clock"></i>
+                    <p>Read Time: 10 min</p>
+                </div>
+                <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+            </div>
+            <div class="blog-footer">
+                <div class="publisher">
+                    <img src="../../static/images/User2.jpg" alt="Publisher">
+                    <p>John Doe</p>
+                </div>
+                <div class="comments-likes">
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>12</span>
+                    </a>
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>250</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-card card" data-url="blog-detail.html">
+            <div class="blog-image">
+                <img src="../../static/images/Teachers.jpg" alt="">
+            </div>
+            <div class="blog-content">
+                <span class="teg">Technology</span>
+                <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-regular fa-clock"></i>
+                    <p>Read Time: 10 min</p>
+                </div>
+                <h2>Modern Landing Page E-commerce Project using Python-Django</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque accusantium nobis, libero nostrum eligendi deserunt, iure illo dicta ea perferendis assumenda officia ducimus architecto praesentium modi. Culpa sequi ducimus voluptates.</p>
+            </div>
+            <div class="blog-footer">
+                <div class="publisher">
+                    <img src="../../static/images/User2.jpg" alt="Publisher">
+                    <p>John Doe</p>
+                </div>
+                <div class="comments-likes">
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>12</span>
+                    </a>
+                    <a href="blog-detail.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>250</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

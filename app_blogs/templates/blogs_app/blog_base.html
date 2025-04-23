@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Blog |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'blogs_app/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs_app/css/blog_home.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs_app/css/blogs_list.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs_app/css/blog_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs_app/css/blog_style.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'blogs_app/js/blog_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="navbar" data-loggedin="true">
+            <div class="logo">
+                <i class="fa-solid fa-bars open-btn" id="open-menu"></i>
+                <a href="#"><img src="../../local_static/images/Logo.png" alt="">
+                    <p>Writings</p>
+                </a>
+            </div>
+            <div class="nav-items">
+                <ul class="nav-list" id="side-menu">
+                    <li class="close-btn" id="close-menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Author</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!--Nav Item For Not Logged Persons-->
+                <div class="nav-btns not-logged-in">
+                    <a>Login</a>
+                    <a class="outline-btn" href="/signup">Subscribe</a>
+                </div>
+                
+                <!--Nav Item For Logged Persons-->
+                <div class="nav-btns logged-in" style="display: none;">
+                    <div class="profile">
+                        <img src="../../local_static/images/Profile Pic.jpg" alt="Profile" id="profile-img">
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <ul class="profile-list">
+                                <li><a href="/profile">Profile</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <div class="footer">
+            <footer>
+                <ul class="foot-items">
+                    <li><h2>Categories</h2></li>
+                    <li><a href="#">All Blogs</a></li>
+                    <li><a href="#">Latest Blogs</a></li>
+                    <li><a href="#">Trending Blogs</a></li>
+                    <li><a href="#">Featured Blogs</a></li>
+                </ul>
+    
+                <ul class="foot-items">
+                    <li><h2>Support</h2></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                    <li><a href="#">Privecy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+    
+                </ul>
+    
+                <ul class="foot-items">
+                    <li><h2>Social</h2></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Medium</a></li>
+                </ul>
+                
+                <ul class="foot-items">
+                    <li><h2>Author</h2></i></li>
+                    <li><a href="#">About Author</a></li>
+                    <li><a href="#">Best of Author</a></li>
+                    <li><a href="#">Authors Choice</a></li>
+                    <li><a href="#">More from Author</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // Wait until the DOM is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+          const openBtn = document.querySelector(".open-btn");
+          const closeBtn = document.querySelector(".close-btn");
+          const navList = document.querySelector(".nav-list");
+      
+          if (openBtn && closeBtn && navList) {
+            openBtn.addEventListener("click", () => {
+              navList.classList.add("active");
+            });
+      
+            closeBtn.addEventListener("click", () => {
+              navList.classList.remove("active");
+            });
+          }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector('.navbar');
+        const isLoggedIn = navbar.dataset.loggedin === "true";
+    
+        const loggedInBtns = navbar.querySelector('.nav-btns.logged-in');
+        const notLoggedInBtns = navbar.querySelector('.nav-btns.not-logged-in');
+    
+        if (isLoggedIn) {
+            loggedInBtns.style.display = "flex";
+            notLoggedInBtns.style.display = "none";
+        } else {
+            loggedInBtns.style.display = "none";
+            notLoggedInBtns.style.display = "flex";
+        }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const profile = document.querySelector('.profile');
+        const profileImg = document.getElementById('profile-img');
+    
+        profileImg.addEventListener('click', function (e) {
+            e.stopPropagation(); // Stop from bubbling up
+            profile.classList.toggle('active');
+        });
+    
+        // Close dropdown if clicking outside
+        document.addEventListener('click', function (e) {
+            if (!profile.contains(e.target)) {
+            profile.classList.remove('active');
+            }
+        });
+        });
+    </script>
+  
+  
+</body>
+</html>

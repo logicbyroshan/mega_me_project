@@ -1,0 +1,86 @@
+/* CSS Variables for colors */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.blog-card .blog-image {
+    width: 100%;
+    height: 220px;
+}
+
+.blog-card .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog-content .date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.blog-content h2 {
+    font-size: 20px;
+    font-family: var(--blog-head-font);
+    color: var(--sub-title-color1);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.blog-content p {
+    text-align: justify;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--card-outline-color);
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.publisher img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comments-likes {
+    display: flex;
+    gap: 10px;
+}
+
+.comments-likes a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--paragraph-color);
+}
+
+.comments-likes a i:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+    color: var(--danger-color);
+}

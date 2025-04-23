@@ -1,0 +1,104 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Educations{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Educations</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search the Educations">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Problems Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Educations</li>
+                        <li class="category" onclick="toggleCategory(this)">Graduation Educations</li>
+                        <li class="category" onclick="toggleCategory(this)">School Educations</li>
+                        <li class="category" onclick="toggleCategory(this)">Courses Educations</li>
+                        <li class="category" onclick="toggleCategory(this)">Diploma Educations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Oldest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Easy Problems</li>
+                        <li onclick="changeSortOption(this)">Medium Problems</li>
+                        <li onclick="changeSortOption(this)">Hard Problems</li>
+                        <li onclick="changeSortOption(this)">Most Liked Problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="edu-card card">
+            <div class="edu-image">
+                <img src="../../static/images/School-Image.jpg" alt="">
+            </div>
+            <div class="edu-content">
+                <div class="teg">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <p>2025-03-09</p>
+                </div>
+                <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                <div class="skills">
+                    <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                </div>
+                <div class="edu-links">
+                    <button class="outline-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu-card card">
+            <div class="edu-image">
+                <img src="../../static/images/institute.jpg" alt="">
+            </div>
+            <div class="edu-content">
+                <div class="teg">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <p>2025-03-09</p>
+                </div>
+                <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                <div class="edu-links">
+                    <button class="outline-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu-card card">
+            <div class="edu-image">
+                <img src="../../static/images/College-Image.jpg" alt="">
+            </div>
+            <div class="edu-content">
+                <div class="teg">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p>2022-01-01</p>
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <p>2025-03-09</p>
+                </div>
+                <h2>Bachelor of Technology - B.Tech, Computer Science and Engineering</h2>
+                <div class="skills">
+                    <p>University Institute of Technology - Rajeev Gandhi Prodyugiki Vishwvidyalay, Bhopal (M.P.)</p>
+                </div>
+                <div class="edu-links">
+                    <button class="outline-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

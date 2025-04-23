@@ -1,0 +1,111 @@
+{% extends 'help_app/help_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ content.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="detail-page-container">
+        <div class="detail-page-detail-card">
+            <div class="detail-page-header">
+                <p class="teg">Design</p>
+                <p class="teg"><i class="fa-solid fa-calendar"></i></i>Uploaded : <span>Jan 23, 2025</span></p>
+                <p class="teg"><i class="fa-solid fa-bolt-lightning"></i>Most Downloaded</p>
+            </div>
+            <h1>UX In The Age of AI/ML</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas laboriosam qui nemo numquam voluptate.</p>
+            <img src="../../static/images/startup.jpeg" alt="Titile Image" class="freelance-image">
+            <div class="doc-viewer">
+                <iframe src="your-file.pdf"></iframe>
+            </div>                 
+            <button class="outline-btn">Doownload Now</button>
+            <div class="tiny-mce-content-detailed">
+                <h1>Welcome to My freelance</h1>
+                <p>This is a sample freelance post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test freelance. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+            
+        </div>
+        <div class="detail-page-side-card">
+
+            <div class="detail-page-side-card1">
+                <h1>Latest freelances</h1>
+                <div class="latest-contents">
+                    <div class="latest-content card">
+                        <img src="" alt="">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-content card">
+                        <img src="" alt="">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                    <div class="latest-content card">
+                        <img src="" alt="">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

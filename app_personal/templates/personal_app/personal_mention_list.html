@@ -1,0 +1,97 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Menstions{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Mensions</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search the Problems">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Problems Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">DSA Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">Database Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">System Design Problems</li>
+                        <li class="category" onclick="toggleCategory(this)">CP Problems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Oldest Solved Problems</li>
+                        <li onclick="changeSortOption(this)">Easy Problems</li>
+                        <li onclick="changeSortOption(this)">Medium Problems</li>
+                        <li onclick="changeSortOption(this)">Hard Problems</li>
+                        <li onclick="changeSortOption(this)">Most Liked Problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="mention-card card">
+            <div class="mention-header">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span class="platform">Twitter</span>
+                <span class="date">Apr 12, 2025</span>
+            </div>
+            
+            <div class="mention-body">
+                <p><strong>@tech_guru</strong> mentioned you: <br>
+                “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+            </div>
+            
+            <div class="mention-footer">
+                <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+            </div>
+        </div>
+
+        <div class="mention-card card">
+            <div class="mention-header">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span class="platform">Twitter</span>
+                <span class="date">Apr 12, 2025</span>
+            </div>
+            
+            <div class="mention-body">
+                <p><strong>@tech_guru</strong> mentioned you: <br>
+                “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+            </div>
+            
+            <div class="mention-footer">
+                <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+            </div>
+        </div>
+
+        <div class="mention-card card">
+            <div class="mention-header">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span class="platform">Twitter</span>
+                <span class="date">Apr 12, 2025</span>
+            </div>
+            
+            <div class="mention-body">
+                <p><strong>@tech_guru</strong> mentioned you: <br>
+                “Highly recommend <strong>@yourhandle</strong> for any backend or AI-related work. Super skilled!”</p>
+                <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+            </div>
+            
+            <div class="mention-footer">
+                <a href="https://twitter.com/somepost" target="_blank">View Post</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

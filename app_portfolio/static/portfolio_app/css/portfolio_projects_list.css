@@ -1,0 +1,57 @@
+/* Project Card Styles */
+.project-card {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-content .date span {
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.project-content h2 {
+    font-size: 20px;
+    color: var(--sub-title-color1);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.project-content p {
+    text-align: justify;
+}
+
+.project-content .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.project-content .skills p {
+    font-weight: 800;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: solid 2px var(--card-outline-color);
+}

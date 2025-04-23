@@ -1,54 +1,35 @@
 from django.db import models
 from tinymce.models import HTMLField
+from django.utils.text import slugify
 from django.contrib.auth.models import User
-from django.dispatch import receiver
-from django.db.models.signals import pre_save
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    
-    def __str__(self):
-        return self.name
+from datetime import datetime
 
 class Blog(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='blogs')
-    publish_date = models.DateTimeField(auto_now_add=True)
-    read_time = models.IntegerField(help_text="Estimated read time in minutes")
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    tags = models.CharField(max_length=500, help_text="Comma-separated tags")
-    hero_image = models.ImageField(upload_to='blog_images/')
-    content = HTMLField()
-    likes = models.ManyToManyField(User, related_name='liked_blogs', blank=True)
-    shares = models.ManyToManyField(User, related_name='shared_blogs', blank=True)
-    
-    def like_count(self):
-        return self.likes.count()
-    
-    def share_count(self):
-        return self.shares.count()
-    
+    title = models.CharField(max_length=200, default="Untitled Blog")
+    slug = models.SlugField(unique=True, blank=True)
+    description = models.TextField(default="No description provided.")
+    category = models.CharField(max_length=100, default="General")
+    publish_date = models.DateField(default=datetime.now)
+    read_time = models.PositiveIntegerField(default=3, help_text="Estimated read time in minutes")
+    tags = models.CharField(max_length=300, default="blog", help_text="Comma-separated tags")
+    hero_image = models.ImageField(upload_to='blogs/hero_images/', default='default_hero.jpg')
+    content = HTMLField(default="<p>Start writing your blog here...</p>")
+    likes = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['-publish_date']
+
     def __str__(self):
         return self.title
 
-class Comment(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return f'Comment by {self.user.username} on {self.blog.title}'
-class BlogUser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    def get_tags_list(self):
+        return [tag.strip() for tag in self.tags.split(',') if tag.strip()]
 
-    def __str__(self):
-        return self.user.username
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
-# Auto-generate username from email before saving
-@receiver(pre_save, sender=User)
-def auto_generate_username(sender, instance, **kwargs):
-    if not instance.username:
-        instance.username = instance.email.split('@')[0]  # Extract username from email
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse("app_blogs:blog_detail", kwargs={"slug": self.slug})

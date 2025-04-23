@@ -1,0 +1,15 @@
+
+/* Service Card Styles */
+.service-card {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; 
+}

@@ -1,0 +1,285 @@
+{% extends 'help_app/help_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ session.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="detail-page-container">
+        <div class="detail-page-detail-card">
+            <div class="session-profile">
+                <div class="profile-container card">
+                    <div class="cover-image"></div>
+                    <div class="profile-img">
+                        <img src="../../local_static/images/Profile Pic.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-section">
+                        <div class="profile-content">
+                            <div class="left-content">
+                                <div class="mentor-name">
+                                    <h2>Drishti Mamtani </h2>
+                                    <span class="teg">⭐Star Mentor</span>
+                                </div>
+                                <p class="position">SWE III @ Google</p>
+                                <p class="description">I’ll be there throughout your placement journey. We’ll work together to build a top notch resume, apply in relevant job openings, work on LinkedIn makeover, do mock interviews, discuss overall progress and scope of improvement.</p>
+                                <div class="stats">
+                                    <span class="teg">🌟 5.0 (163 Reviews)</span>
+                                    <span class="teg">❤️ 70958+ Mentoring Mins</span>
+                                    <span class="teg">👥 300+ Mentees</span>
+                                </div>
+                            </div>
+                    
+                            <div class="right-content">
+                                <div class="buttons">
+                                    <button class="outline-btn">🤍 Ask a Question</button>
+                                    <button class="outline-btn">View Pricing</button>
+                                </div>
+                                <div class="experience">
+                                    <h3>5+ years of experience</h3>
+                                    <p>📍 Google</p>
+                                    <p>📍 Microsoft</p>
+                                    <p>📍 Amazon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tiny-mce-content-detailed">
+                <h1>Welcome to My freelance</h1>
+                <p>This is a sample freelance post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test freelance. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+            <section class="testimonial-section">
+                <h2 class="section-title">What Our Students Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card card">
+                        <p>"This mentorship changed my perspective and helped me land my first internship!"</p>
+                        <h4>- Aryan, B.Tech CSE</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"Incredible sessions. Clear roadmap, real guidance, and lots of motivation."</p>
+                        <h4>- Neha, MBA Student</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"The personalized mentorship gave me clarity on my career goals. Loved it!"</p>
+                        <h4>- Ravi, UPSC Aspirant</h4>
+                    </div>
+                    <div class="testimonial-card card">
+                        <p>"The personalized mentorship gave me clarity on my career goals. Loved it!"</p>
+                        <h4>- Ravi, UPSC Aspirant</h4>
+                    </div>
+                </div>
+            </section>
+                
+        </div>
+        <div class="detail-page-side-card">
+            <div class="detail-page-side-card1">
+                <h1>Book Your Session</h1>
+                <div class="book-session-container">
+                    <div class="book-session-card card">
+                        <div class="session-head">
+                            <h2>Available Dates</h2>
+                            <div class="buttons">
+                            <i class="fa-solid fa-chevron-left" id="prevBtn"></i>
+                            <i class="fa-solid fa-chevron-right" id="nextBtn"></i>
+                            </div>
+                        </div>
+                        <div class="dates">
+                            <div class="date-slider" id="dateSlider">
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                                
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+
+                                <div class="date-card">
+                                    <p class="day">SAT</p>
+                                    <h3>26 Apr</h3>
+                                    <p class="slots">3 Slots</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-session-card card">
+                        <div class="session-head">
+                            <h2>Available Times</h2>
+                            <div class="buttons">
+                                <i class="fa-solid fa-chevron-left" id="prevTimeBtn"></i>
+                                <i class="fa-solid fa-chevron-right" id="nextTimeBtn"></i>
+                            </div>
+                        </div>
+                        <div class="dates">
+                            <div class="date-slider" id="timeSlider">
+                                <div class="date-card">
+                                    <h3>09:00 AM</h3>
+                                </div>
+                                <div class="date-card">
+                                    <h3>10:00 AM</h3>
+                                </div>
+
+                                <div class="date-card">
+                                    <h3>01:00 PM</h3>
+                                </div>
+
+                                <div class="date-card">
+                                    <h3>01:00 PM</h3>
+                                </div>
+                                <!-- Add more time cards -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-sesion-card-btn">
+                    <button class="outline-btn" id="bookSessionBtn">Book Your Session On: </button>
+                </div>
+            </div>
+
+            <div class="detail-page-side-card1">
+                <h1>Pricing</h1>
+                <div class="pricing-card-container">
+                    <div class="pricing-card card">
+                        <!-- Radio buttons -->
+                        <input type="radio" id="basic" name="plan" checked>
+                        <input type="radio" id="premium" name="plan">
+                        <input type="radio" id="extra" name="plan">
+                        
+                        <!-- Tab labels -->
+                        <div class="tabs">
+                            <label for="basic">Basic</label>
+                            <label for="premium">Pro</label>
+                            <label for="extra">Elite</label>
+                        </div>
+                        
+                        <!-- Pricing content -->
+                        <div class="pricing-content">
+                            <div class="basic">
+                            <div class="pricing-title">Basic Plan</div>
+                            <div class="pricing-price">₹49/month</div>
+                            <ul class="pricing-features">
+                                <li>Access to basic notes</li>
+                                <li>Limited downloads</li>
+                                <li>Community support</li>
+                            </ul>
+                            </div>
+                        
+                            <div class="premium">
+                            <div class="pricing-title">Premium Plan</div>
+                            <div class="pricing-price">₹89/month</div>
+                            <ul class="pricing-features">
+                                <li>Everything in Basic</li>
+                                <li>Unlimited downloads</li>
+                                <li>Access to PYQs</li>
+                                <li>Priority support</li>
+                            </ul>
+                            </div>
+                        
+                            <div class="extra">
+                            <div class="pricing-title">Extra Premium</div>
+                            <div class="pricing-price">₹119/month</div>
+                            <ul class="pricing-features">
+                                <li>Everything in Premium</li>
+                                <li>Offline access</li>
+                                <li>1-on-1 mentor session</li>
+                                <li>Advanced resources</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

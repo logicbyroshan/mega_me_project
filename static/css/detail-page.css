@@ -1,0 +1,213 @@
+/* detail-page Detail Page CSS */
+.detail-page-container {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: start;
+  }
+
+.detail-page-container h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: var(--blog-head-font);
+    color: var(--sub-title-color1);
+    line-height: 1.1;
+  }
+
+.detail-page-container h1 span {
+    letter-spacing: 2px;
+    color: var(--paragraph-color);
+  }
+
+.detail-page-container h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--paragraph-color);
+    font-family: var(--blog-head-font);
+  }
+
+/* Side Card */
+  .detail-page-side-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    gap: 30px;
+  }
+  
+  .detail-page-side-card1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px;
+    border: solid 3px var(--card-outline-color);
+  }
+
+  .detail-page-side-card1 img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  
+  .detail-page-detail-card {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    gap: 20px;
+  }
+  
+  .detail-page-detail-card img {
+    width: 100%;
+    border: solid 3px var(--card-outline-color);
+  }
+  
+
+/* Detail Card */
+  .detail-page-content-detailed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  
+  .detail-page-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .features .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+  }
+  
+  .features .features-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    gap: 20px;
+  }
+  
+  .features .features-list li img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .features .features-list li .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    gap: 15px;
+  }
+  
+  .features .features-list li h3 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  
+  .features .features-list li p {
+    text-align: center;
+  }
+
+  /* Hero Slider Container */
+  .hero-image-slider {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 40px;
+    border: solid 3px var(--card-outline-color);
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    height: auto;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  /* Navigation Button Container */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Increased to prevent hover issues */
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  /* Positioning */
+  .prev { left: 20px; }
+  .next { right: 20px; }
+  
+  .prev i, .next i {
+    font-size: 30px;
+    color: var(--paragraph-color);
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .detail-page-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .detail-page-side-card {
+      width: 100%;
+    }
+  
+    .detail-page-detail-card {
+      width: 100%;
+    }
+    
+  }
+
+  

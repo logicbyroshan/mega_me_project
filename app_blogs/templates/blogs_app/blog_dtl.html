@@ -1,0 +1,177 @@
+{% extends 'blogs_app/blog_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ blog.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="detail-page-container">
+        <div class="detail-page-detail-card">
+            <div class="detail-page-header">
+                <p class="teg">Design</p>
+                <p class="teg"><i class="fa-regular fa-calendar-check"></i>Published : <span>Jan 23, 2025</span></p>
+                <p class="teg"><i class="fa-regular fa-clock"></i>Read Time : <span>10 min</span></p>
+            </div>
+            <h1>UX In The Age of AI/ML</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas laboriosam qui nemo numquam voluptate.</p>
+            <div class="blog-tags">
+                <span class="teg">AI</span>
+                <span class="teg">ML</span>
+                <span class="teg">UX</span>
+            </div>
+            <img src="../../static/images/startup.jpeg" alt="Titile Image" class="blog-image">
+
+            <div class="tiny-mce-content-detailed">
+                <h1>Welcome to My Blog</h1>
+                <p>This is a sample blog post to test the CSS styling for different elements like headings, text, images, videos, tables, and more.</p>
+
+                <h2>Introduction</h2>
+                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Duis vehicula ex at lorem egestas, sed gravida ex facilisis.</p>
+
+                <h3>Embedded Image</h3>
+                <img src="https://via.placeholder.com/800x400" alt="Sample Image">
+
+                <h3>Video Embed</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/BCWItl_WtWs?si=qYP64MoYnTKTJDjG" allowfullscreen></iframe>
+                </div>
+
+                <h3>Blockquote Example</h3>
+                <blockquote>
+                    "This is an example of a blockquote. It should stand out from the rest of the text."
+                </blockquote>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Improved typography</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Install TinyMCE</li>
+                    <li>Customize styles</li>
+                    <li>Test on different devices</li>
+                </ol>
+
+                <h3>Table Example</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Heading Colors</td>
+                        <td>Customizable with CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Support</td>
+                        <td>Fully Responsive</td>
+                    </tr>
+                </table>
+
+                <h3>Code Block</h3>
+                <pre>
+                    <code>
+                        def hello_world():
+                            print("Hello, World!")
+                    </code>
+                </pre>
+
+                <h3>Horizontal Rule</h3>
+                <hr>
+
+                <h3>Conclusion</h3>
+                <p>This concludes our test blog. If everything is styled correctly, this page should look visually appealing and mobile-friendly.</p>
+            </div>
+            <div class="blog-appri">
+                <div class="blog-header">
+                    <div class="blog-head-left">
+                        <div class="blog-profile">
+                            <img src="../../static/images/user1.jpeg" alt="">
+                            <h1 class="blog-profile-name">Roshan Damor</h1>
+                        </div>
+                        <div class="blog-status">
+                            <img src="../../static/images/like.png" alt="">
+                            <p class="blog-status-name">255</p>
+                        </div>
+                    </div>
+                    <div class="blog-head-right">
+                        <div class="blog-status">
+                            <img src="../../static/images/Reddit.png" alt="">
+                        </div>
+                        <div class="blog-status">
+                            <img src="../../static/images/twitter (1).png" alt="">
+                        </div>
+                        <div class="blog-status">
+                            <img src="../../static/images/linkedin.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-commenter">
+                    <div class="blog-commenting">
+                        <textarea placeholder="Write your comment here.." class="comment-section"></textarea>
+                        <div class="blogs-btn">
+                            <button class="outline-btn">Comment</button>
+                            <button class="outline-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-comments">
+                    <div class="blog-comment card">
+                        <div class="blog-profile">
+                            <img src="../../static/images/user1.jpeg" alt="">
+                            <h1 class="blog-profile-name">Roshan Damor</h1>
+                        </div>
+                        <p class="blog-comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                    </div>
+
+                    <div class="blog-comment card">
+                        <div class="blog-profile">
+                            <img src="../../static/images/user1.jpeg" alt="">
+                            <h1 class="blog-profile-name">Roshan Damor</h1>
+                        </div>
+                        <p class="blog-comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                    </div>
+
+                    <div class="blog-comment card">
+                        <div class="blog-profile">
+                            <img src="../../static/images/user1.jpeg" alt="">
+                            <h1 class="blog-profile-name">Roshan Damor</h1>
+                        </div>
+                        <p class="blog-comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-page-side-card">
+
+            <div class="detail-page-side-card1">
+                <h1 class="blog-side-title">Latest Blogs</h1>
+                <div class="latest-blogs">
+                    <div class="latest-blog card">
+                        <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                    <div class="latest-blog card">
+                        <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-page-side-card1">
+                <h1 class="blog-side-title">Latest Blogs</h1>
+                <div class="latest-blogs">
+                    <div class="latest-blog card">
+                        <img src="../../local_static/images/Portfolio Website Thumbnail 1.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

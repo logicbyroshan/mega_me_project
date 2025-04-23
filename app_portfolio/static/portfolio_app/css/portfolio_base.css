@@ -1,0 +1,199 @@
+/* Base Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .toggle-menu {
+    display: none !important;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Nav Items */
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    transform: translateX(5px) translateY(-2px);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    color: var(--title-color);
+  }
+
+
+  #close-btn {
+    background-color: var(--danger-color);
+    color: var(--white-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .footer {
+    width: 100%;
+    color: var(--title-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer .footer-first-level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: solid 3px var(--card-color);
+  }
+  
+  .footer-first-level h2 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Second Level */
+  .footer-second-level {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-item-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .footer-item-head h3 {
+    font-size: 20px;
+  }
+  
+  .footer-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease;
+  }
+  
+  .footer-item-body a {
+    text-decoration: none;
+    color: var(--paragraph-color);
+    font-size: 16px;
+  }
+
+  .footer-item-body a:hover {
+    transform: translateX(5px) translateY(-2px);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    color: var(--title-color);
+  }
+  
+  /* Third Level */
+  .footer-third-level {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-third-level .first-part {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-third-level a {
+    color: var(--paragraph-color);
+    text-decoration: none;
+  }
+
+  /* Sidebar Nav for Small Screens */
+  @media (max-width: 768px) {
+    .toggle-menu {
+      display: block !important;
+    }
+  
+    .nav-items {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--card-color);
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 25px;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+  
+    .nav-items.active {
+      left: 0;
+    }
+  
+    #close-btn {
+      align-self: flex-end;
+      font-size: 24px;
+    }
+
+
+    .footer-third-level .first-part {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .footer-first-level h2 {
+      font-size: 25px;
+    }
+
+    .footer-third-level .first-part a {
+      text-align: center;
+    }
+
+  }
+  

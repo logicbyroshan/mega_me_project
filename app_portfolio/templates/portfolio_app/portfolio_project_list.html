@@ -1,0 +1,123 @@
+{% extends 'portfolio_app/portfolio_base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Projects</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search The Project">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Experience Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">Dev Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">CLI Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">AI-ML Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">Design Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">Basic Projects</li>
+                        <li class="category" onclick="toggleCategory(this)">Other Projects</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Projects<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Projects</li>
+                        <li onclick="changeSortOption(this)">Oldest Projects</li>
+                        <li onclick="changeSortOption(this)">Best Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="project-card card">
+            <div class="project-image">
+                <img src="../../static/images/Project 1.jpg" alt="">
+            </div>
+            <div class="project-content">
+                <div class="teg">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Completion : <span> 24 December 2020</span></p>
+                </div>
+                <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                <div class="skills">
+                    <p>Skills Used : </p>
+                    <span class="teg">HMTL</span>
+                    <span class="teg">CSS</span>
+                    <span class="teg">JavaScript</span>
+                    <span class="teg">Python</span>
+                    <span class="teg">Django</span>
+                    <span class="teg">RestAPI</span>
+                </div>
+                <div class="project-links">
+                    <button class="outline-btn">Github</button>
+                    <button class="outline-btn">Documentation</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card card">
+            <div class="project-image">
+                <img src="../../static/images/Project 1.jpg" alt="">
+            </div>
+            <div class="project-content">
+                <div class="teg">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Completion : <span> 24 December 2020</span></p>
+                </div>
+                <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                <div class="skills">
+                    <p>Skills Used : </p>
+                    <span class="teg">HMTL</span>
+                    <span class="teg">CSS</span>
+                    <span class="teg">JavaScript</span>
+                    <span class="teg">Python</span>
+                    <span class="teg">Django</span>
+                    <span class="teg">RestAPI</span>
+                </div>
+                <div class="project-links">
+                    <button class="outline-btn">Github</button>
+                    <button class="outline-btn">Documentation</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card card">
+            <div class="project-image">
+                <img src="../../static/images/Project 1.jpg" alt="">
+            </div>
+            <div class="project-content">
+                <div class="teg">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Completion : <span> 24 December 2020</span></p>
+                </div>
+                <h2>Modern Landing Page E-comm Project using Python-Django</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam culpa pariatur tempora provident molestias, suscipit necessitatibus, autem velit, sapiente nisi atque officiis sequi iure praesentium accusamus.</p>
+                <div class="skills">
+                    <p>Skills Used : </p>
+                    <span class="teg">HMTL</span>
+                    <span class="teg">CSS</span>
+                    <span class="teg">JavaScript</span>
+                    <span class="teg">Python</span>
+                    <span class="teg">Django</span>
+                    <span class="teg">RestAPI</span>
+                </div>
+                <div class="project-links">
+                    <button class="outline-btn">Github</button>
+                    <button class="outline-btn">Documentation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,221 @@
+/* Base CSS for Personal Page */
+nav {
+    background: var(--card-color);
+    height: 80px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav ul {
+    margin-right: 20px;
+}
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: white;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  a:hover {
+    background: #1b9bff;
+    transition: .5s;
+  }
+  
+  .checkbtn {
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+
+  .menu-close {
+    display: none;
+  }
+  
+
+/* Footer */
+.footer-per {
+  width: 100%;
+  background: var(--card-color);
+  border-radius: 20px;
+}
+
+.footer-per .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 50px;
+}
+
+.footer-row .footer-col h4 {
+    color: var(--title-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a:hover {
+  color: var(--sub-title-color1);
+}
+
+.footer-col p {
+  margin: 20px 0;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--paragraph-color);
+  color: var(--paragraph-color);
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: var(--paragraph-color);
+}
+
+ .footer-col form button {
+  background: var(--paragraph-color);
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: var(--sub-title-color1);
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: var(--paragraph-color);
+    font-size: 20px;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .menu-close {
+        display: block;
+      }
+      
+    .checkbtn {
+        display: block;
+      }
+    
+      label.logo {
+        font-size: 22px;
+      }
+    
+    nav ul {
+        position: fixed;
+        width: 95%;
+        height: 100vh;
+        background: var(--card-hover-color1);
+        top: 120px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+        border-radius: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: var(--sub-title-color1);
+    }
+
+    #check:checked~ul {
+        left: 10px;
+    }
+
+  .footer-per {
+    transform: none;
+    width: 100%;
+    border-radius: 10;
+  }
+
+  .footer-per .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}

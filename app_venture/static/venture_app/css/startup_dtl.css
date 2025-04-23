@@ -1,0 +1,490 @@
+.startup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 75px;
+    width: 100%;
+}
+
+.startup-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.hero-image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* 3 slides */
+}
+
+.slide {
+    flex: 1 0 100%;
+    max-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    border: 3px solid var(--card-outline-color);
+}
+
+/* Navigation Buttons */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.startup-left, .startup-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    border: 2px solid var(--card-outline-color);
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.bio-startup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.startup-pitch {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.startup-pitch video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--card-outline-color);
+}
+
+
+.startup-left .startup-card {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--card-color);
+}
+
+.startup-left .top-startup {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
+.startup-left .top-startup .startup-logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 75px;
+    object-fit: cover;
+    border: 2px solid var(--card-outline-color);
+}
+
+.startup-left .top-startup .startup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.startup-content .startup-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.down-startup .address {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.address .add-tag {
+    display: flex;
+    gap: 5px;
+}
+
+.startup-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.team-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: start;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 49%;
+    min-width: 260px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    border: 2px solid var(--card-outline-color);
+}
+
+.team-card .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.team-card .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card .team-connect {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.startup-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+
+.startup-specs .specs-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 62px;
+    justify-content: start;
+    border: 2px solid var(--card-outline-color);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.specs-card {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 30%;
+    min-width: 260px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: var(--card-color);
+}
+
+.specs-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.specs-card .spec-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.startup-problem {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+.startup-sections{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.product-content {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: var(--card-color);
+    border: 3px solid var(--card-outline-color);
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-side1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.product-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid var(--card-outline-color);
+}
+
+.key-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-features li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.key-features li i.fa-star {
+    color: #f5a623; /* golden star color */
+    margin-right: 8px;
+}
+
+.startup-cta {
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--card-outline-color);
+    background-color: var(--card-color);
+  }
+  
+  .startup-cta h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .startup-cta p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .startup-cta form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .startup-cta-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .startup-cta-input select,
+  .startup-cta-input input,
+  .startup-cta-input textarea {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--card-outline-color);
+    background-color: transparent;
+    color: var(--paragraph-color);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+  }
+
+  .startup-cta-input select:focus,
+  .startup-cta-input input:focus,
+    .startup-cta-input textarea:focus {
+        outline: none;
+        border-color: var(--card-outline-color);
+    }
+
+  select, option {
+    background-color: var(--card-color);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+
+
+@media  (max-width: 768px) {
+    .startup-cta h2 {
+        font-size: 1.5rem;
+      }
+    
+      .startup-cta p {
+        font-size: 0.95rem;
+      }
+    
+      .startup-cta-input {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .startup-cta-input select,
+      .startup-cta-input input,
+      .startup-cta-input textarea {
+        max-width: 100%;
+      }
+    .startup-problem {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .startup-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .startup-left,
+    .startup-right {
+        width: 100%;
+    }
+
+    .startup-left .top-startup {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .startup-left .top-startup .startup-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .startup-left .top-startup .startup-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+
+    .team-card .team-connect {
+        gap: 20px;
+    }
+
+    .team-cards {
+        justify-content: center;
+    }
+
+    .startup-specs .specs-cards {
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .specs-cards .specs-card {
+        max-width: 100%;
+    }
+    
+    .product-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-side1 {
+        width: 100%;
+    }
+    .product-side {
+        width: 100%;
+    }
+
+    .product-content {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-card {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .team-card .team-connect {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .specs-cards .specs-card {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+}

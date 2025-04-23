@@ -1,0 +1,142 @@
+{% extends 'portfolio_app/portfolio_base.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Skills</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search My Skills">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="sort-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Skiil Categories <i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">Programming Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">Design Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">Web Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">AI-ML Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">DevOps Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">Database Skills</li>
+                        <li class="category" onclick="toggleCategory(this)">Other Skills</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs <i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Least Experience Skills</li>
+                        <li onclick="changeSortOption(this)">Intermediate Level Skills</li>
+                        <li onclick="changeSortOption(this)">Most Experience Skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="skill-card card" data-url="#">
+            <div class="skill-head">
+                <div class="skill-title">
+                    <div class="skill-image">
+                        <img src="../../static/images/nodejs.png" alt="">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+                <div class="progress-card">
+                    <span class="progress-tag1 ">Progress</span>
+                    <span class="progress-tag2 ">Done</span>
+                    <span class="progress-tag3 active">Expert</span>
+                </div>
+            </div>
+            <div class="skill-content">
+                <div class="progress-container" data-progress="90">
+                    <div class="progress"></div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                <div class="skill-links">
+                    <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                    <button class="download-btn view-resources-btn" data-resources='[
+                        {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                        {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                        {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                        {"type": "link", "url": "https://roshandamor.site"}
+                    ]'>View Resources</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card card" data-url="#">
+            <div class="skill-head">
+                <div class="skill-title">
+                    <div class="skill-image">
+                        <img src="../../static/images/tailwind.png" alt="">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+                <div class="progress-card">
+                    <span class="progress-tag1 active">Progress</span>
+                    <span class="progress-tag2 ">Done</span>
+                    <span class="progress-tag3 ">Expert</span>
+                </div>
+            </div>
+            <div class="skill-content">
+                <div class="progress-container" data-progress="90">
+                    <div class="progress"></div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                <div class="skill-links">
+                    <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                    <button class="download-btn view-resources-btn" data-resources='[
+                        {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                        {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                        {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                        {"type": "link", "url": "https://roshandamor.site"}
+                    ]'>View Resources</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="popup-modal">
+            <div class="modal-content">
+                <button class="close-btn">Close</button>
+                <div class="preview-container"></div>
+            </div>
+        </div>            
+
+        <div class="skill-card card" data-url="#">
+            <div class="skill-head">
+                <div class="skill-title">
+                    <div class="skill-image">
+                        <img src="../../static/images/typescript.png" alt="">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+                <div class="progress-card">
+                    <span class="progress-tag1 ">Progress</span>
+                    <span class="progress-tag2 active">Done</span>
+                    <span class="progress-tag3 ">Expert</span>
+                </div>
+            </div>
+            <div class="skill-content">
+                <div class="progress-container" data-progress="90">
+                    <div class="progress"></div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati corrupti enim debitis ipsum cum tempora.</p>
+                <div class="skill-links">
+                    <button class="download-btn view-certificate-btn" data-certificate="../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf">View Certificate</button>
+                    <button class="download-btn view-resources-btn" data-resources='[
+                        {"type": "image", "url": "../../static/images/Ariba Agrifarm.jpg"},
+                        {"type": "pdf", "url": "../../static/images/ROSHAN_RESUMETech1_HphXexi (3).pdf"},
+                        {"type": "video", "url": "https://www.youtube.com/embed/uuKUBtGzrg0?si=E2cXSQE2G9DVsZUm"},
+                        {"type": "link", "url": "https://roshandamor.site"}
+                    ]'>View Resources</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Hobby |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_base.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_home.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_book_list.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_poems_list.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_product_list.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_advanture.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_writing.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_story_list.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_photography.css' %}">
+    <link rel="stylesheet" href="{% static 'hobby_app/css/hobby_diy.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'hobby_app/js/hobby_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-bars"></i>
+                <img src="../../local_static/images/Logo.png" alt="Logo" class="logo-img">
+                <p>Hobbies</p>
+            </div>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../local_templates/app_hobby/hobby_base.html">Hobbies</a>
+                <a href="../../local_templates/app_hobby/hobby_base.html">Store</a>
+                <a href="../../local_templates/app_hobby/hobby_base.html">Socials</a>
+                <a href="../../local_templates/app_hobby/hobby_base.html">Know Me</a>
+            </div>
+            <div class="nav-btns">
+                <button class="btn">Subscribe</button>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <div class="footer">
+            <div class="footer-links">
+                <div class="logo">
+                    <img src="../../local_static/images/Logo.png" alt="Logo" class="logo-img">
+                    <p>Hobbies</p>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, iusto.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Qucik Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Hobbies</a>
+                <a href="#">About Me</a>
+                <a href="#">Store</a>
+                <a href="#">Likes</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Hobbies</h3>
+                <a href="#">DIY Products</a>
+                <a href="#">Gardening</a>
+                <a href="#">Cooking</a>
+                <a href="#">Photography</a>
+                <a href="#">Traveling</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#">Startups</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Freelance</a>
+                <a href="#">Articles</a>
+                <a href="#">Persoanl</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Socials</h3>
+                <a href="#">Get It</a>
+                <a href="#">Contact Me</a>
+                <a href="#">Support</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Privacy Policy</a>
+            </div>    
+        </div>
+    </div>
+    <script>
+        const toggleIcon = document.querySelector('.logo i');
+        const navLinks = document.querySelector('.nav-links');
+    
+        toggleIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+</html>

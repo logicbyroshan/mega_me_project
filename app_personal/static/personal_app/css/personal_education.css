@@ -1,0 +1,39 @@
+/* Education Cards Styles */
+.edu-card {
+    width: 100%;
+    min-width: 300px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-card .edu-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.edu-card .edu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.edu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edu-content h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.15;
+}
+
+.edu-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}

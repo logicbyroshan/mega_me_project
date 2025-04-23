@@ -1,0 +1,42 @@
+.pagination-container {
+    width: 100%;
+    min-width: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid var(--card-outline-color);
+    border-radius: 15px;
+    padding: 10px;
+    background-color: transparent;
+  }
+  
+  .pagination-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .page-btn {
+    background-color: var(--card-outline-color);
+    color: var(--title-color);
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .page-btn span {
+    margin: 0 5px;
+  }
+  
+  .page-btn:hover {
+    background-color: var(--card-hover-color1);
+  }
+
+  @media screen and (max-width: 485px) {
+    .page-btn span {
+      display: none;
+    }
+  }

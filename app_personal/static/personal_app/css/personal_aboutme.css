@@ -1,0 +1,157 @@
+/*About Me Section Start from Here */
+.aboutme-container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 120px auto; /* Center the container horizontally and add top margin */
+    border-radius: 25px;
+    width: 100%;
+    max-width: 100%; /* Fixed width of the container */
+    position: relative; /* Ensures positioned elements inside this container are relative to it */
+}
+
+.image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+    display: flex;
+    justify-content: center; /* Ensure content inside is centered */
+    align-items: center;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1300px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1300px) rotateY(360deg);
+    }
+}
+
+.image span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(550px);
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+.image span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.aboutme {
+    color: white;
+    max-width: 100%;
+    gap: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 125px;
+}
+
+.aboutme h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 75px;
+    font-family: var(--personal-head-font);
+    color: var(--personal-color);
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: 25px;
+    margin: 15px 0;
+    color: var(--title-color);
+    font-weight: bolder;
+    font-family: var(--secondary-font);
+}
+
+.my-btns {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .image {
+        width: 150px;
+        height: 225px;
+    }
+
+    .image span {
+        transform: rotateY(calc(var(--i) * 36deg)) translateZ(400px);
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        width: 120px;
+        height: 180px;
+    }
+
+    .image span {
+        transform: rotateY(calc(var(--i) * 36deg)) translateZ(300px);
+    }
+    .aboutme-container {
+        width: 100%;
+        padding: 10px; /* Added padding for smaller screens */
+        margin: 75px auto; /* Adjusted margin for smaller screens */
+    }
+
+    .aboutme h1 {
+        width: 100%;
+        text-align: center; /* Center the text for smaller screens */
+        font-size: 50px; /* Adjusted font size for smaller screens */
+    }
+
+    .aboutme h3 {
+        width: 100%;
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+
+    .my-btns {
+        flex-wrap: wrap;
+        gap: 10px; /* Reduced gap between buttons */
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .image {
+        width: 90px;
+        height: 135px;
+    }
+
+    .image span {
+        transform: rotateY(calc(var(--i) * 36deg)) translateZ(200px);
+    }
+
+    .aboutme-container {
+        width: 100%;
+        padding: 5px; /* Added padding for smaller screens */
+        margin: 50px auto; /* Adjusted margin for smaller screens */
+    }
+    .aboutme h1 {
+        font-size: 40px; /* Adjusted font size for smaller screens */
+    }
+
+    .aboutme h3 {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+}

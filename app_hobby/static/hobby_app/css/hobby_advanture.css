@@ -1,0 +1,168 @@
+/* CSS for Adventure section Section */
+.advanture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.advanture-container .adventure-header {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.adventure-header h1 {
+    font-size: 50px;
+    font-family: var(--hobby-head-font);
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.adventure-home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.adventure-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(1px), brightness(0.5);
+}
+
+.adventure-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.adventure-content h1 {
+    font-size: 50px;
+    font-family: var(--hobby-head-font);
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.popular-adventures h1 {
+    font-size: 75px;
+    font-family: var(--heading-font);
+    color: var(--main-text-color);
+    letter-spacing: 5px;
+}
+.adventure-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.adventure-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    background-color: var(--card-color);
+    width: fit-content;
+    max-width: 400px;
+}
+
+.adventure-card .contnet-section {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    justify-content: left;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.image-section video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.hashtags span {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--card-outline-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.mcontainer
+{
+    width: 100%;
+    margin: 40px auto;
+    columns: 4;
+    column-gap: 40px;
+}
+
+.mcontainer .box
+{
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    border-radius: 15px;
+}
+
+.mcontainer .box img{
+    max-width: 100%;
+    border-radius: 15px;
+    border: var(--card-outline-color) 2px solid;
+}
+
+@media (max-width: 1300px){
+    .mcontainer
+    {
+        width: calc(100% - 40px);
+        columns: 3;
+    }
+}
+
+@media (max-width: 768px){
+    .mcontainer
+    {
+        columns: 2;
+    }
+}
+
+@media (max-width: 480px){
+    .mcontainer
+    {
+        columns: 1;
+    }
+}

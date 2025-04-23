@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Ventures |{% block title %}{% endblock %}</title>
+    
+    <!-- 🌐 Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btns.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reuse.css' %}">
+
+    <!-- 📦 Local Blog App CSS -->
+    <link rel="stylesheet" href="{% static 'venture_app/css/startup_base.css' %}">
+    <link rel="stylesheet" href="{% static 'venture_app/css/startup_home.css' %}">
+    <link rel="stylesheet" href="{% static 'venture_app/css/startup_dtl.css' %}">
+
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+    <script src="{% static 'venture_app/js/venture_app.js' %}"></script>
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <!--Navbar Starts Here-->
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="../../local_static/images/Logo.png" alt="R LOGO">
+                    <p>Ventures</p>
+                </a>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        
+            <div class="nav-items" id="navMenu">
+                <a href="#" class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-rocket"></i><span>Startups</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-lightbulb"></i><span>Ideas</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-briefcase"></i><span>Business</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-hand-holding-dollar"></i><span>Funding</span></a>
+            </div>
+            
+            <div class="nav-buttons" id="navButtons">
+                <a href="#" class="outline-btn">Explore</a>
+                <a href="#" class="outline-btn">Connect</a>
+            </div>
+            
+        </div>
+        {% block content %}{% endblock %}
+        <!-- Footer Starts Here -->
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Startups</a></li>
+                    <li><a href="#">Ideas</a></li>
+                    <li><a href="#">Bussinesses</a></li>
+                    <li><a href="#">Funding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">Link Learner</a></li>
+                    <li><a href="#">100X Careers</a></li>
+                    <li><a href="#">Note Vista</a></li>
+                    <li><a href="#">UNIVO</a></li>
+                    <li><a href="#">COMPI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect with Me</h3>
+                <form class="footer-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            const navButtons = document.getElementById("navButtons");
+    
+            navMenu.classList.toggle("show");
+            navButtons.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

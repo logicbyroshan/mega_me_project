@@ -1,0 +1,106 @@
+/* Experience Card Styles */
+.exp-card {
+    max-width: 1300px;
+    min-width: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.exp-card .top-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.exp-card .top-content img {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 300px;
+    min-width: 100px;
+    height: 50px;
+    object-fit: contain;
+    align-items: start;
+    justify-content: start;
+}
+
+.exp-card .top-content h2 {
+    color: var(--sub-title-color1);
+    letter-spacing: 1px;
+    flex-grow: 1;
+    font-size: 28px;
+    flex-grow: 1; 
+}
+
+.exp-card .top-content .date {
+    text-align: left;
+    min-width: 150px;
+    margin-left: auto; 
+}
+
+.date .start-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exp-content p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+    .exp-card {
+        width: 100%;
+    }
+
+    .exp-card .top-content {
+        flex-wrap: wrap;
+    }
+
+    .exp-card .top-content .date {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .exp-card {
+        padding: 15px;
+    }
+
+    .exp-card .top-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .exp-card .top-content img {
+        max-width: 200px;
+    }
+
+    .exp-card .top-content h2 {
+        font-size: 24px;
+    }
+
+    .exp-card .top-content .date {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .exp-card .top-content img {
+        max-width: 170px;
+    }
+
+    .exp-card .top-content h2 {
+        font-size: 18px;
+    }
+
+}

@@ -1,0 +1,89 @@
+{% extends 'personal_app/personal_base.html' %}
+{% load static %}
+
+{% block title %}Achievements{% endblock %}
+
+{% block content %}
+    <div class="cards-header">
+        <h1>All Achievments</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search the Problems">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="cards-header-options">
+            <div class="cards-categories">
+                <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Achievments Categories<i class="fa-solid fa-caret-down"></i></button>
+                <div class="categories-item" id="categories-item">
+                    <ul>
+                        <li class="category active" onclick="toggleCategory(this)">All Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Job Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Internship Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Hackthons Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Academic Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Project Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Startups Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Volunteering Achievments</li>
+                        <li class="category" onclick="toggleCategory(this)">Other Achievments</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cards-sort">
+                <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                <div class="sort-items" id="sort-items">
+                    <ul>
+                        <li onclick="changeSortOption(this)">Latest Achievments</li>
+                        <li onclick="changeSortOption(this)">Oldest Achievments</li>
+                        <li onclick="changeSortOption(this)">Biggest Achievments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="container card">
+            <div class="image-container">
+                <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+            </div>
+            <div class="title-container">
+                <h3>SIH WINNER</h3>
+                <h3>|</h3>
+                <h3>23 Dec 2024</h3>
+            </div>
+            <div class="description-container">
+                <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+            </div>
+            <div class="outline-btn">Details</div>
+        </div>
+
+        <div class="container card">
+            <div class="image-container">
+                <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+            </div>
+            <div class="title-container">
+                <h3>SIH WINNER</h3>
+                <h3>|</h3>
+                <h3>23 Dec 2024</h3>
+            </div>
+            <div class="description-container">
+                <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+            </div>
+            <div class="outline-btn">Details</div>
+        </div>
+
+        <div class="container card">
+            <div class="image-container">
+                <img src="trophy.png" alt="Achievement Image" class="achievement-image">
+            </div>
+            <div class="title-container">
+                <h3>SIH WINNER</h3>
+                <h3>|</h3>
+                <h3>23 Dec 2024</h3>
+            </div>
+            <div class="description-container">
+                <p class="description"><span>Achievement:</span> Won the Smart India Hackathon 2024, a national-level hackathon organized by the Government of India.</p>
+            </div>
+            <div class="outline-btn">Details</div>
+        </div>
+    </div>
+{% endblock %}

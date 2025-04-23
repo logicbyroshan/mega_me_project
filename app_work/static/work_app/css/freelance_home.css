@@ -1,0 +1,290 @@
+.freelance-container {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: start;
+}
+
+.freelance-container .startup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.freelance-header .freelance-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.freelance-header .freelance-head h2 {
+    font-size: 35px;
+    text-align: center;
+    max-width: 800px;
+    letter-spacing: 2px;
+    font-family: var(--freelance-head-font);
+    color: var(--card-outline-color);
+    line-height: 1;
+    font-weight: 700;
+}
+
+
+.hero-section {
+    position: relative;
+    background: url('../../images/Freelance\ Hero-01.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: 3px solid var(--card-outline-color);
+    border-radius: 25px;
+    background-position-x: left; /* always show left side */
+}
+
+.hero-overlay {
+    width: 75%;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin-left: auto;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    color: var(--card-outline-color);
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: var(--freelance-head-font);
+}
+
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--card-color);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.stats-section {
+    width: 100%;
+    text-align: center;
+    border: 3px solid var(--card-outline-color);
+    border-radius: 25px;
+  }
+  
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.stat-card {
+    background: var(--card-color);
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, var(--card-hover-color1), var(--card-hover-color2));
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+.testimonial-card {
+    max-width: 100%;
+    min-width: 300px;
+  }
+  
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+  }
+
+  .contact-section {
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: var(--card-color);
+    border: 3px solid var(--card-outline-color);
+  }
+  
+  .contact-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .contact-info {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-info img {
+    width: 98%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .contact-form {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background: transparent;
+    border-radius: 12px;
+  }
+  
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    color: var(--paragraph-color);
+    padding: 1rem;
+    border: 2px solid var(--card-outline-color);
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+  }
+
+  .contact-form select option {
+    color: var(--paragraph-color);
+    background-color: var(--card-color);
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--card-outline-color);
+        box-shadow: 0 0 5px var(--card-outline-color);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form select::placeholder,
+    .contact-form textarea::placeholder {
+        color: var(--paragraph-color);
+    }
+  
+  .contact-form button {
+    padding: 1rem;
+    background-color: var(--card-outline-color);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .booking-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--card-outline-color);
+    color: #fff;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .booking-link:hover {
+    background: linear-gradient(145deg, var(--card-hover-color1), var(--card-hover-color2));
+  }
+  
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+      }
+
+      .contact-form {
+        width: 100%;
+      }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .hero-overlay {
+        width: 100%;
+        padding: 1.5rem;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Optional for contrast */
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        color: var(--title-color);
+    }
+
+
+    .hero-content p {
+        color: var(--paragraph-color);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+}

@@ -1,48 +1,36 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView, DetailView, FormView
-from .models import Skill, Project, Experience, FAQ  # Import models
+from django.views.generic import TemplateView, ListView, DetailView
+from .models import Experience, Project, Skill
 
-# Home page
-class HomeView(TemplateView):
-    template_name = "app_portfolio/index.html"
+# Portfolio Home View
+class PortfolioHomeView(TemplateView):
+    template_name = "portfolio_app/portfolio_home.html"
 
-# Skill list
-class SkillListView(ListView):
-    model = Skill
-    template_name = "app_portfolio/skill_list.html"
-    context_object_name = "skills"
-
-# Project list
-class ProjectListView(ListView):
-    model = Project
-    template_name = "app_portfolio/project_list.html"
-    context_object_name = "projects"
-
-# Project details
-class ProjectDetailView(DetailView):
-    model = Project
-    template_name = "app_portfolio/project_detail.html"
-    context_object_name = "project"
-
-# Experience list
+# Experience List View
 class ExperienceListView(ListView):
     model = Experience
-    template_name = "app_portfolio/experience_list.html"
+    template_name = "portfolio_app/portfolio_experience_list.html"
     context_object_name = "experiences"
 
-# Experience details
+# Project List View
+class ProjectListView(ListView):
+    model = Project
+    template_name = "portfolio_app/portfolio_project_list.html"
+    context_object_name = "projects"
+
+# Skill List View
+class SkillListView(ListView):
+    model = Skill
+    template_name = "portfolio_app/portfolio_skill_list.html"
+    context_object_name = "skills"
+
+# Experience Detail View
 class ExperienceDetailView(DetailView):
     model = Experience
-    template_name = "app_portfolio/experience_detail.html"
+    template_name = "portfolio_app/portfolio_experience_dtl.html"
     context_object_name = "experience"
 
-# FAQ list
-class FAQListView(ListView):
-    model = FAQ
-    template_name = "faq_list.html"
-    context_object_name = "faqs"
-
-# Contact page
-class ContactView(TemplateView):
-    template_name = "app_portfolio/contact.html"
+# Project Detail View
+class ProjectDetailView(DetailView):
+    model = Project
+    template_name = "portfolio_app/portfolio_project_dtl.html"
+    context_object_name = "project"

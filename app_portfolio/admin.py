@@ -1,59 +1,62 @@
 from django.contrib import admin
-from .models import Skill, SkillResource, Project, ProjectImage, Feature, Experience, ExperienceImage, PersonalInfo
+from .models import Skill, SkillResource, Experience, ExperienceImage, Contribution, SkillResource, ProjectScreenshot, ProjectSkill, ProjectFeature, Project, Contributor
 
 
-class SkillResourceInline(admin.TabularInline):
+class SkillResourceInline(admin.StackedInline):
     model = SkillResource
-    extra = 1  # Allow adding new resources from Skill admin
+    extra = 1
+
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
-    inlines = [SkillResourceInline]  # Manage resources inside Skill
-    list_display = ("name", "progress_level", "progress")
+    list_display = ('name', 'progress_level', 'progress_percent')
+    inlines = [SkillResourceInline]
+    search_fields = ('name', 'description')
+    list_filter = ('progress_level',)
 
 
-class ProjectImageInline(admin.TabularInline):
-    model = ProjectImage
-    extra = 1  # Allow adding new images from Project admin
-    min_num = 1  # At least 1 image required
-
-class FeatureInline(admin.TabularInline):
-    model = Feature
-    extra = 1  # Allow adding new features from Project admin
-    min_num = 1  # At least 1 feature required
-
-@admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectImageInline, FeatureInline]  # Manage images & features inside Project
-    list_display = ("title", "category", "completion_date")
 
 class ExperienceImageInline(admin.TabularInline):
     model = ExperienceImage
-    extra = 1  # Number of empty forms to display
+    extra = 1
+
+
+class ContributionInline(admin.StackedInline):
+    model = Contribution
+    extra = 1
+
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ('position', 'status', 'start_date', 'end_date')
-    search_fields = ('position', 'description')
-    list_filter = ('status', 'start_date', 'end_date')
-    filter_horizontal = ('skills',)
-    inlines = [ExperienceImageInline]
-    fieldsets = (
-        ('Basic Information', {
-            'fields': ('position', 'status', 'start_date', 'end_date')
-        }),
-        ('Details', {
-            'fields': ('description', 'skills', 'contributions', 'detailed_blog')
-        }),
-    )
+    list_display = ('position', 'company_name', 'status', 'start_date', 'end_date')
+    search_fields = ('position', 'company_name')
+    list_filter = ('status',)
+    inlines = [ExperienceImageInline, ContributionInline]
 
-@admin.register(PersonalInfo)
-class PersonalInfoAdmin(admin.ModelAdmin):
-    list_display = ('name', 'total_projects', 'years_of_experience')
-    search_fields = ('name',)
-    list_filter = ('years_of_experience',)
-    fieldsets = (
-        ('Basic Information', {'fields': ('name', 'profile_image')}),
-        ('Career Stats', {'fields': ('total_projects', 'years_of_experience')}),
-        ('About', {'fields': ('about_me', 'titles', 'detailed_description')}),
-    )
+
+class ProjectScreenshotInline(admin.TabularInline):
+    model = ProjectScreenshot
+    extra = 1
+
+
+class ProjectSkillInline(admin.TabularInline):
+    model = ProjectSkill
+    extra = 1
+
+
+class ProjectFeatureInline(admin.StackedInline):
+    model = ProjectFeature
+    extra = 1
+
+
+class ContributorInline(admin.StackedInline):
+    model = Contributor
+    extra = 1
+
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'start_date', 'completion_date')
+    search_fields = ('title', 'tags')
+    list_filter = ('category',)
+    inlines = [ProjectScreenshotInline, ProjectSkillInline, ProjectFeatureInline, ContributorInline]

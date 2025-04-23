@@ -1,0 +1,131 @@
+
+/* CSS for diy-craft Section */
+.diy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.diy-container .diy-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.diy-container .diy-header h1 {
+    font-size: 50px;
+    font-family: var(--hobby-head-font);
+    letter-spacing: 2px;
+}
+
+.diy-hero{
+    position: relative;
+    width: 98vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.diy-hero .hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.diy-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    top: 50%;
+    left: 50;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.diy-hero .hero-content h1 {
+    font-size: 50px;
+    line-height: 1;
+    font-family: var(--hobby-head-font);
+    letter-spacing: 2px;
+}
+
+.diy-hero .hero-content button {
+    width: fit-content;
+}
+
+
+.diy-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.about-diy-content {
+    flex: 1;
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-diy-content h1 {
+    font-size: 50px;
+    line-height: 1;
+    font-family: var(--hobby-head-font);
+    letter-spacing: 3px;
+
+}
+
+.about-diy-image {
+    flex: 1;
+    width: 50%;
+}
+
+.about-diy-image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Grid Layout */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Category Card */
+.category-card {
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--card-color);
+    border-radius: 20px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}

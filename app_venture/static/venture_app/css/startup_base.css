@@ -1,0 +1,199 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo styles */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Nav Items */
+.nav-items {
+    display: flex;
+    border-radius: 8px;
+    padding: 5px;
+    border: solid 3px var(--card-outline-color);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 120px;
+    height: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.nav-item i,
+.nav-item span {
+    position: absolute;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+/* Initially, both stacked center */
+.nav-item i {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.nav-item span {
+    opacity: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.nav-item:hover i {
+    transform: translateX(-35px);
+    color: var(--sub-title-color1);
+}
+
+.nav-item:hover span {
+    transform: translateX(20px);
+    opacity: 1;
+    color: var(--sub-title-color1);
+}
+
+/* Nav Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger icon hidden by default */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items,
+    .nav-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-items {
+        background-color: var(--card-color);
+    }
+
+    .nav-items.show,
+    .nav-buttons.show {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 50px;
+    }
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--sub-title-color1);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--sub-title-color1);
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-form input,
+.footer-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.footer-form button {
+    padding: 10px;
+    background-color: var(--sub-title-color1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-form button:hover {
+    background-color: white;
+    color: var(--sub-title-color1);
+}

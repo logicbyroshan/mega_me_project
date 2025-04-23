@@ -1,0 +1,104 @@
+{% extends 'hobby_app/hobby_base.html' %}
+{% load static %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+        <div class="hobby-container">
+            <div class="cards-header">
+                <h1>All Books</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Books Here">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="cards-header-options">
+                    <div class="cards-categories">
+                        <button class="filled-btn category-toggle-btn" onclick="toggleCategoryDropdown()">Book Categories<i class="fa-solid fa-caret-down"></i></button>
+                        <div class="categories-item" id="categories-item">
+                            <ul>
+                                <li class="category active" onclick="toggleCategory(this)">All Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Fictional Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Story Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Non-Fiction Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Educational Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Collections Books</li>
+                                <li class="category" onclick="toggleCategory(this)">Other Books</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cards-sort">
+                        <button class="filled-btn" id="sort-button" onclick="toggleDropdown()">Sort Blogs<i class="fa-solid fa-caret-down"></i></button>
+                        <div class="sort-items" id="sort-items">
+                            <ul>
+                                <li onclick="changeSortOption(this)">Latest Books</li>
+                                <li onclick="changeSortOption(this)">Oldest Books</li>
+                                <li onclick="changeSortOption(this)">Popular Books</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-container">
+                <div class="book-card card">
+                    <div class="book-image">
+                        <img src="../../static/images/Book3.png" alt="Book Image">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-header">
+                            <h2>Botanical Shakspere of the Fire</h2>
+                            <p>William Shakespeare</p>
+                        </div>
+                        
+                        <div class="purchase">
+                            <p id="not-price">Rs. <span>500</span></p>
+                            <p>Rs. <span id="price">499</span></p>                            
+                        </div>
+                        <button class="outline-btn">BUY NOW</button>
+                    </div>
+                </div>
+        
+                <div class="book-card card">
+                    <div class="book-image">
+                        <img src="../../static/images/Book2.jpg" alt="Book Image">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-header">
+                            <h2>Botanical Shakspere of the Fire</h2>
+                            <p>William Shakespeare</p>
+                        </div>
+                        
+                        <div class="purchase">
+                            <p id="not-price">Rs. <span>500</span></p>
+                            <p>Rs. <span id="price">499</span></p>                            
+                        </div>
+                        <button class="outline-btn">BUY NOW</button>
+                    </div>
+                </div>
+        
+                <div class="book-card card">
+                    <div class="book-image">
+                        <img src="../../static/images/Book1.jpg" alt="Book Image">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-header">
+                            <h2>Botanical Shakspere of the Fire</h2>
+                            <p>William Shakespeare</p>
+                        </div>
+                        
+                        <div class="purchase">
+                            <p id="not-price">Rs. <span>500</span></p>
+                            <p>Rs. <span id="price">499</span></p>
+                        </div>
+                        <button class="outline-btn">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Cards Header-->
+        
+        
+    </div>
+    
+</body>
+</html>
